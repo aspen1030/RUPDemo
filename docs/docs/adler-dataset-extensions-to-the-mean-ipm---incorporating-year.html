@@ -296,62 +296,110 @@ r_d = Norm( recr_sz, recr_sd )</code></pre>
 <h3><span class="header-section-number">6.0.2</span> 5. Creating new folders in the R project<a href="adler-dataset-extensions-to-the-mean-ipm---incorporating-year.html#creating-new-folders-in-the-r-project" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 Since we are building these new IPMs from the same dataset we used to parameterize the mean IPM for <em>Bouteloua gracilis</em>, we should keep all of our files contained within the same R project. We want to make sure we keep our files organized, however, so we will just create some new folders named “Bou_gra_yr” to differentiate the two workflows. The R project should look like this:
 <center>
-<table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' >
+<table class="gmisc_table" style="border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;">
 <tbody>
-<tr style='border-top: 2px solid grey;'>
-<td style='border-top: 2px solid grey; text-align: left;'>&#128193; Adler_Colorado</td>
-<td style='border-top: 2px solid grey; text-align: left;'></td>
-<td style='border-top: 2px solid grey; text-align: left;'></td>
+<tr style="border-top: 2px solid grey;">
+<td style="border-top: 2px solid grey; text-align: left;">
+📁 Adler_Colorado
+</td>
+<td style="border-top: 2px solid grey; text-align: left;">
+</td>
+<td style="border-top: 2px solid grey; text-align: left;">
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'>     &#8627;</td>
-<td style='text-align: left;'><span style="color:dodgerblue;">&#127297;</span> Adler_Colorado.Rproj</td>
-<td style='text-align: left;'></td>
+<td style="text-align: left;">
+↳
+</td>
+<td style="text-align: left;">
+<span style="color:dodgerblue;">🅁</span> Adler_Colorado.Rproj
+</td>
+<td style="text-align: left;">
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'>&#128193; data</td>
-<td style='text-align: left;'></td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+📁 data
+</td>
+<td style="text-align: left;">
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'>     &#8627;</td>
-<td style='text-align: left;'>&#128193; Bou_gra</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+↳
+</td>
+<td style="text-align: left;">
+📁 Bou_gra
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'>&#128193; Bou_gra_yr</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+📁 Bou_gra_yr
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'>&#128193; R</td>
-<td style='text-align: left;'></td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+📁 R
+</td>
+<td style="text-align: left;">
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'>     &#8627;</td>
-<td style='text-align: left;'>&#128193; Bou_gra</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+↳
+</td>
+<td style="text-align: left;">
+📁 Bou_gra
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'>&#128193; Bou_gra_yr</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+📁 Bou_gra_yr
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'>&#128193; results</td>
-<td style='text-align: left;'></td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+📁 results
+</td>
+<td style="text-align: left;">
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'>     &#8627;</td>
-<td style='text-align: left;'>&#128193; Bou_gra</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+↳
+</td>
+<td style="text-align: left;">
+📁 Bou_gra
+</td>
 </tr>
 <tr>
-<td style='border-bottom: 2px solid grey; text-align: left;'></td>
-<td style='border-bottom: 2px solid grey; text-align: left;'></td>
-<td style='border-bottom: 2px solid grey; text-align: left;'>&#128193; Bou_gra_yr</td>
+<td style="border-bottom: 2px solid grey; text-align: left;">
+</td>
+<td style="border-bottom: 2px solid grey; text-align: left;">
+</td>
+<td style="border-bottom: 2px solid grey; text-align: left;">
+📁 Bou_gra_yr
+</td>
 </tr>
 </tbody>
 </table>
@@ -1077,135 +1125,331 @@ And how we wrote the model expression in R:</p>
 <p><img src="rupdemo-webpage_files/figure-html/unnamed-chunk-93-1.png" width="768" /></p>
 <div class="sourceCode" id="cb180"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb180-1"><a href="adler-dataset-extensions-to-the-mean-ipm---incorporating-year.html#cb180-1" aria-hidden="true" tabindex="-1"></a><span class="co"># dev.off( )</span></span></code></pre></div>
 <center>
-<table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' >
+<table class="gmisc_table" style="border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;">
 <thead>
 <tr>
-<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Year</th>
-<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'><i>n<sub>t0</sub></i></th>
-<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'><i>n<sub>t1</sub></i></th>
-<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Observed<br>population growth</th>
-<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Yearly asymptotic<br>lambda</th>
-<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Projected<br><i>n<sub>t1</sub></i></th>
-<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Projected<br>population growth</th>
+<th style="font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+Year
+</th>
+<th style="font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+<i>n<sub>t0</sub></i>
+</th>
+<th style="font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+<i>n<sub>t1</sub></i>
+</th>
+<th style="font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+Observed<br>population growth
+</th>
+<th style="font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+Yearly asymptotic<br>lambda
+</th>
+<th style="font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+Projected<br><i>n<sub>t1</sub></i>
+</th>
+<th style="font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+Projected<br>population growth
+</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>1998</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>42</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>58</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>1.381</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>1.277</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>69</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>1.646</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+1998
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+42
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+58
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+1.381
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+1.277
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+69
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+1.646
+</td>
 </tr>
 <tr>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>1999</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>58</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>159</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>2.741</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>2.291</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>151</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>2.608</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+1999
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+58
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+159
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+2.741
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+2.291
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+151
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+2.608
+</td>
 </tr>
 <tr>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>2000</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>49</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>84</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>1.714</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>0.947</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>120</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>2.446</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+2000
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+49
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+84
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+1.714
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+0.947
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+120
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+2.446
+</td>
 </tr>
 <tr>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>2001</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>84</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>74</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>0.881</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>1.076</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>97</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>1.15</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+2001
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+84
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+74
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+0.881
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+1.076
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+97
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+1.15
+</td>
 </tr>
 <tr>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>2002</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>174</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>934</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>5.368</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>3.678</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>653</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>3.75</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+2002
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+174
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+934
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+5.368
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+3.678
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+653
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+3.75
+</td>
 </tr>
 <tr>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>2003</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>934</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>286</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>0.306</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>0.907</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>363</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>0.388</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+2003
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+934
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+286
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+0.306
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+0.907
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+363
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+0.388
+</td>
 </tr>
 <tr>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>2004</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>286</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>283</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>0.99</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>0.896</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>214</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>0.748</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+2004
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+286
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+283
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+0.99
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+0.896
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+214
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+0.748
+</td>
 </tr>
 <tr>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>2005</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>283</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>173</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>0.611</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>0.974</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>216</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>0.763</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+2005
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+283
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+173
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+0.611
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+0.974
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+216
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+0.763
+</td>
 </tr>
 <tr>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>2006</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>173</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>233</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>1.347</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>1.257</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>213</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>1.23</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+2006
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+173
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+233
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+1.347
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+1.257
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+213
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+1.23
+</td>
 </tr>
 <tr>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>2007</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>233</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>314</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>1.348</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>1.165</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>276</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>1.186</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+2007
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+233
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+314
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+1.348
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+1.165
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+276
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+1.186
+</td>
 </tr>
 <tr>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>2008</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>314</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>342</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>1.089</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>1.027</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>325</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>1.035</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+2008
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+314
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+342
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+1.089
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+1.027
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+325
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+1.035
+</td>
 </tr>
 <tr>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>2009</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>342</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>245</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>0.716</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>0.972</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>267</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>0.78</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+2009
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+342
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+245
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+0.716
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+0.972
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+267
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+0.78
+</td>
 </tr>
 <tr>
-<td style='padding-left: 1.5em; padding-right: 1.5em; border-bottom: 2px solid grey; text-align: center;'>2010</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; border-bottom: 2px solid grey; text-align: center;'>245</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; border-bottom: 2px solid grey; text-align: center;'>220</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; border-bottom: 2px solid grey; text-align: center;'>0.898</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; border-bottom: 2px solid grey; text-align: center;'>0.967</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; border-bottom: 2px solid grey; text-align: center;'>202</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; border-bottom: 2px solid grey; text-align: center;'>0.826</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; border-bottom: 2px solid grey; text-align: center;">
+2010
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; border-bottom: 2px solid grey; text-align: center;">
+245
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; border-bottom: 2px solid grey; text-align: center;">
+220
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; border-bottom: 2px solid grey; text-align: center;">
+0.898
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; border-bottom: 2px solid grey; text-align: center;">
+0.967
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; border-bottom: 2px solid grey; text-align: center;">
+202
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; border-bottom: 2px solid grey; text-align: center;">
+0.826
+</td>
 </tr>
 </tbody>
 </table>
@@ -1287,149 +1531,373 @@ And how we wrote the model expression in R:</p>
 <span id="cb182-65"><a href="adler-dataset-extensions-to-the-mean-ipm---incorporating-year.html#cb182-65" aria-hidden="true" tabindex="-1"></a>                     <span class="at">iterations =</span> <span class="dv">200</span> )</span>
 <span id="cb182-66"><a href="adler-dataset-extensions-to-the-mean-ipm---incorporating-year.html#cb182-66" aria-hidden="true" tabindex="-1"></a>lam_mean_ipmr <span class="ot">&lt;-</span> <span class="fu">lambda</span>( ipmr_yr )</span></code></pre></div>
 <center>
-<table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' >
+<table class="gmisc_table" style="border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;">
 <thead>
 <tr>
-<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Year</th>
-<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'><i>n<sub>t0</sub></i></th>
-<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'><i>n<sub>t1</sub></i></th>
-<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Observed<br>population growth</th>
-<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Yearly asymptotic<br>lambda</th>
-<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Projected<br><i>n<sub>t1</sub></i></th>
-<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Projected<br>population growth</th>
-<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Lambda from ipmr</th>
+<th style="font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+Year
+</th>
+<th style="font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+<i>n<sub>t0</sub></i>
+</th>
+<th style="font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+<i>n<sub>t1</sub></i>
+</th>
+<th style="font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+Observed<br>population growth
+</th>
+<th style="font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+Yearly asymptotic<br>lambda
+</th>
+<th style="font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+Projected<br><i>n<sub>t1</sub></i>
+</th>
+<th style="font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+Projected<br>population growth
+</th>
+<th style="font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+Lambda from ipmr
+</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>1998</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>42</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>58</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>1.381</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>1.277</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>69</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>1.646</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>1.286</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+1998
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+42
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+58
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+1.381
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+1.277
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+69
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+1.646
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+1.286
+</td>
 </tr>
 <tr>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>1999</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>58</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>159</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>2.741</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>2.291</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>151</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>2.608</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>2.295</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+1999
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+58
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+159
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+2.741
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+2.291
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+151
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+2.608
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+2.295
+</td>
 </tr>
 <tr>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>2000</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>49</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>84</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>1.714</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>0.947</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>120</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>2.446</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>0.955</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+2000
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+49
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+84
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+1.714
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+0.947
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+120
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+2.446
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+0.955
+</td>
 </tr>
 <tr>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>2001</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>84</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>74</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>0.881</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>1.076</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>97</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>1.15</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>1.085</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+2001
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+84
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+74
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+0.881
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+1.076
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+97
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+1.15
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+1.085
+</td>
 </tr>
 <tr>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>2002</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>174</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>934</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>5.368</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>3.678</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>653</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>3.75</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>3.68</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+2002
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+174
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+934
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+5.368
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+3.678
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+653
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+3.75
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+3.68
+</td>
 </tr>
 <tr>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>2003</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>934</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>286</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>0.306</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>0.907</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>363</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>0.388</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>0.747</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+2003
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+934
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+286
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+0.306
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+0.907
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+363
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+0.388
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+0.747
+</td>
 </tr>
 <tr>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>2004</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>286</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>283</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>0.99</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>0.896</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>214</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>0.748</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>0.803</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+2004
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+286
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+283
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+0.99
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+0.896
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+214
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+0.748
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+0.803
+</td>
 </tr>
 <tr>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>2005</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>283</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>173</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>0.611</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>0.974</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>216</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>0.763</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>0.941</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+2005
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+283
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+173
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+0.611
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+0.974
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+216
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+0.763
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+0.941
+</td>
 </tr>
 <tr>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>2006</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>173</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>233</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>1.347</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>1.257</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>213</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>1.23</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>1.256</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+2006
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+173
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+233
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+1.347
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+1.257
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+213
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+1.23
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+1.256
+</td>
 </tr>
 <tr>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>2007</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>233</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>314</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>1.348</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>1.165</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>276</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>1.186</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>1.167</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+2007
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+233
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+314
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+1.348
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+1.165
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+276
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+1.186
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+1.167
+</td>
 </tr>
 <tr>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>2008</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>314</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>342</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>1.089</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>1.027</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>325</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>1.035</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>1.034</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+2008
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+314
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+342
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+1.089
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+1.027
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+325
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+1.035
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+1.034
+</td>
 </tr>
 <tr>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>2009</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>342</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>245</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>0.716</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>0.972</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>267</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>0.78</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; text-align: center;'>0.909</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+2009
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+342
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+245
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+0.716
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+0.972
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+267
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+0.78
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; text-align: center;">
+0.909
+</td>
 </tr>
 <tr>
-<td style='padding-left: 1.5em; padding-right: 1.5em; border-bottom: 2px solid grey; text-align: center;'>2010</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; border-bottom: 2px solid grey; text-align: center;'>245</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; border-bottom: 2px solid grey; text-align: center;'>220</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; border-bottom: 2px solid grey; text-align: center;'>0.898</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; border-bottom: 2px solid grey; text-align: center;'>0.967</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; border-bottom: 2px solid grey; text-align: center;'>202</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; border-bottom: 2px solid grey; text-align: center;'>0.826</td>
-<td style='padding-left: 1.5em; padding-right: 1.5em; border-bottom: 2px solid grey; text-align: center;'>0.893</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; border-bottom: 2px solid grey; text-align: center;">
+2010
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; border-bottom: 2px solid grey; text-align: center;">
+245
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; border-bottom: 2px solid grey; text-align: center;">
+220
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; border-bottom: 2px solid grey; text-align: center;">
+0.898
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; border-bottom: 2px solid grey; text-align: center;">
+0.967
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; border-bottom: 2px solid grey; text-align: center;">
+202
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; border-bottom: 2px solid grey; text-align: center;">
+0.826
+</td>
+<td style="padding-left: 1.5em; padding-right: 1.5em; border-bottom: 2px solid grey; text-align: center;">
+0.893
+</td>
 </tr>
 </tbody>
 </table>
@@ -1649,247 +2117,454 @@ test_model( pdb_test, id = &quot;bg00yr&quot; )</code></pre>
 </blockquote>
 As before, let’s take a look at the organization of the project folder before writing the wrapper file:
 <center>
-<table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' >
+<table class="gmisc_table" style="border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;">
 <tbody>
-<tr style='border-top: 2px solid grey;'>
-<td style='border-top: 2px solid grey; text-align: left;'>&#128193; Adler_Colorado</td>
-<td style='border-top: 2px solid grey; text-align: left;'></td>
-<td style='border-top: 2px solid grey; text-align: left;'></td>
-<td style='border-top: 2px solid grey; text-align: left;'></td>
+<tr style="border-top: 2px solid grey;">
+<td style="border-top: 2px solid grey; text-align: left;">
+📁 Adler_Colorado
+</td>
+<td style="border-top: 2px solid grey; text-align: left;">
+</td>
+<td style="border-top: 2px solid grey; text-align: left;">
+</td>
+<td style="border-top: 2px solid grey; text-align: left;">
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'>     &#8627;</td>
-<td style='text-align: left;'><span style="color:dodgerblue;">&#127297;</span> Adler_Colorado.Rproj</td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
+<td style="text-align: left;">
+↳
+</td>
+<td style="text-align: left;">
+<span style="color:dodgerblue;">🅁</span> Adler_Colorado.Rproj
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'>&#128193; data</td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+📁 data
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'>     &#8627;</td>
-<td style='text-align: left;'>&#128193; Bou_gra</td>
-<td style='text-align: left;'></td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+↳
+</td>
+<td style="text-align: left;">
+📁 Bou_gra
+</td>
+<td style="text-align: left;">
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'>&#128193; Bou_gra_yr</td>
-<td style='text-align: left;'></td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+📁 Bou_gra_yr
+</td>
+<td style="text-align: left;">
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'>     &#8627;</td>
-<td style='text-align: left;'><span style="color:forestgreen;">&#127303;</span> surv_pars.csv</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+↳
+</td>
+<td style="text-align: left;">
+<span style="color:forestgreen;">🅇</span> surv_pars.csv
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'><span style="color:forestgreen;">&#127303;</span> grow_pars.csv</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+<span style="color:forestgreen;">🅇</span> grow_pars.csv
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'><span style="color:forestgreen;">&#127303;</span> recr_pars.csv</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+<span style="color:forestgreen;">🅇</span> recr_pars.csv
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'><span style="color:forestgreen;">&#127303;</span> pars_cons.csv</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+<span style="color:forestgreen;">🅇</span> pars_cons.csv
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'><span style="color:forestgreen;">&#127303;</span> pars_var.csv</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+<span style="color:forestgreen;">🅇</span> pars_var.csv
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'><span style="color:forestgreen;">&#127303;</span> all_pars.csv</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+<span style="color:forestgreen;">🅇</span> all_pars.csv
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'><span style="color:forestgreen;">&#127303;</span> lambdas_yr.csv</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+<span style="color:forestgreen;">🅇</span> lambdas_yr.csv
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'>&#128193; R</td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+📁 R
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'>     &#8627;</td>
-<td style='text-align: left;'>&#128193; Bou_gra</td>
-<td style='text-align: left;'></td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+↳
+</td>
+<td style="text-align: left;">
+📁 Bou_gra
+</td>
+<td style="text-align: left;">
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'>&#128193; Bou_gra_yr</td>
-<td style='text-align: left;'></td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+📁 Bou_gra_yr
+</td>
+<td style="text-align: left;">
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'>     &#8627;</td>
-<td style='text-align: left;'><span style="color:dodgerblue;">&#9415;</span> 01_Plotting.R</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+↳
+</td>
+<td style="text-align: left;">
+<span style="color:dodgerblue;">Ⓡ</span> 01_Plotting.R
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'><span style="color:dodgerblue;">&#9415;</span> 02_VitalRates.R</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+<span style="color:dodgerblue;">Ⓡ</span> 02_VitalRates.R
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'><span style="color:dodgerblue;">&#9415;</span> 03_IPMScratch.R</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+<span style="color:dodgerblue;">Ⓡ</span> 03_IPMScratch.R
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'><span style="color:dodgerblue;">&#9415;</span> 04_ipmr.R</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+<span style="color:dodgerblue;">Ⓡ</span> 04_ipmr.R
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'><span style="color:dodgerblue;">&#9415;</span> 05_PADRINO.R</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+<span style="color:dodgerblue;">Ⓡ</span> 05_PADRINO.R
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'>&#128193; results</td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+📁 results
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'>     &#8627;</td>
-<td style='text-align: left;'>&#128193; Bou_gra</td>
-<td style='text-align: left;'></td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+↳
+</td>
+<td style="text-align: left;">
+📁 Bou_gra
+</td>
+<td style="text-align: left;">
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'>&#128193; Bou_gra_yr</td>
-<td style='text-align: left;'></td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+📁 Bou_gra_yr
+</td>
+<td style="text-align: left;">
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'>     &#8627;</td>
-<td style='text-align: left;'>&#128443; histograms.png</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+↳
+</td>
+<td style="text-align: left;">
+🖻 histograms.png
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'>&#128443; survival_binned_yr.png</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+🖻 survival_binned_yr.png
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'>&#128443; growth_yr.png</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+🖻 growth_yr.png
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'>&#128443; recruit_yr.png</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+🖻 recruit_yr.png
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'>&#128443; recr_histograms.png</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+🖻 recr_histograms.png
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'>&#128443; survival_pred.png</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+🖻 survival_pred.png
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'>&#128443; grow_pred.png</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+🖻 grow_pred.png
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'>&#128443; grow_pred_2.png</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+🖻 grow_pred_2.png
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'>&#128443; recruit_pred.png</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+🖻 recruit_pred.png
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'>&#128443; obs_proj_lambdas.png</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+🖻 obs_proj_lambdas.png
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'>&#128442; Chu_2013_fulltext.pdf</td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+🖺 Chu_2013_fulltext.pdf
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'><span style="color:forestgreen;">&#127303;</span> Bou_gra_pdb.xlsx</td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+<span style="color:forestgreen;">🅇</span> Bou_gra_pdb.xlsx
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'><span style="color:forestgreen;">&#127303;</span> Bou_gra_yr_pdb.xlsx</td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+<span style="color:forestgreen;">🅇</span> Bou_gra_yr_pdb.xlsx
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'>&#128441; Bou_gra_notes.txt</td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+🖹 Bou_gra_notes.txt
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'>&#128441; Bou_gra_yr_notes.txt</td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+🖹 Bou_gra_yr_notes.txt
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
 </tr>
 <tr>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'><span style="color:dodgerblue;">&#9415;</span> Bou_gra_wrapper.R</td>
-<td style='text-align: left;'></td>
-<td style='text-align: left;'></td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+<span style="color:dodgerblue;">Ⓡ</span> Bou_gra_wrapper.R
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
 </tr>
 <tr>
-<td style='border-bottom: 2px solid grey; text-align: left;'></td>
-<td style='border-bottom: 2px solid grey; text-align: left;'><span style="color:dodgerblue;">&#9415;</span> Bou_gra_yr_wrapper.R</td>
-<td style='border-bottom: 2px solid grey; text-align: left;'></td>
-<td style='border-bottom: 2px solid grey; text-align: left;'></td>
+<td style="border-bottom: 2px solid grey; text-align: left;">
+</td>
+<td style="border-bottom: 2px solid grey; text-align: left;">
+<span style="color:dodgerblue;">Ⓡ</span> Bou_gra_yr_wrapper.R
+</td>
+<td style="border-bottom: 2px solid grey; text-align: left;">
+</td>
+<td style="border-bottom: 2px solid grey; text-align: left;">
+</td>
 </tr>
 </tbody>
 </table>

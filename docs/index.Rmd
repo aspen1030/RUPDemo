@@ -1,6 +1,7 @@
 ---
 title: "RUPDemo Digitization Guide"
 output: bookdown::gitbook
+site: bookdown::bookdown_site
 date: "2024-09-11"
 documentclass: book
 github-repo: docs
