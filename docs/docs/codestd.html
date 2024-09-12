@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>RUPDemo Digitization Guide</title>
-  <meta name="description" content="RUPDemo Digitization Guide" />
+  <title>1 Coding Standards | RUPDemo Digitization Guide</title>
+  <meta name="description" content="1 Coding Standards | RUPDemo Digitization Guide" />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="RUPDemo Digitization Guide" />
+  <meta property="og:title" content="1 Coding Standards | RUPDemo Digitization Guide" />
   <meta property="og:type" content="book" />
   
   
   <meta name="github-repo" content="docs" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="RUPDemo Digitization Guide" />
+  <meta name="twitter:title" content="1 Coding Standards | RUPDemo Digitization Guide" />
   
   
   
@@ -29,7 +29,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
+<link rel="prev" href="index.html"/>
 <link rel="next" href="projorg.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -135,6 +135,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
 <li class="part"><span><b>I General Guidelines</b></span></li>
 <li class="chapter" data-level="1" data-path="codestd.html"><a href="codestd.html"><i class="fa fa-check"></i><b>1</b> Coding Standards</a>
 <ul>
@@ -176,7 +177,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.4.12" data-path="genwf.html"><a href="genwf.html#final-steps-of-digitization"><i class="fa fa-check"></i><b>3.4.12</b> 12. Final steps of digitization</a></li>
 </ul></li>
 <li class="chapter" data-level="3.5" data-path="genwf.html"><a href="genwf.html#why-do-we-construct-the-ipm-twice"><i class="fa fa-check"></i><b>3.5</b> Why do we construct the IPM twice?</a></li>
-<li class="chapter" data-level="3.6" data-path="genwf.html"><a href="genwf.html#useful-links"><i class="fa fa-check"></i><b>3.6</b> Useful links</a></li>
 </ul></li>
 <li class="part"><span><b>II Adler Dataset Example</b></span></li>
 <li class="chapter" data-level="4" data-path="adwf.html"><a href="adwf.html"><i class="fa fa-check"></i><b>4</b> Adler Dataset: Example of Workflow</a>
@@ -217,6 +217,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.0.8" data-path="adyr.html"><a href="adyr.html#populating-the-padrino-database-template-1"><i class="fa fa-check"></i><b>6.0.8</b> 11. Populating the PADRINO database template</a></li>
 <li class="chapter" data-level="6.0.9" data-path="adyr.html"><a href="adyr.html#finishing-up-the-digitization-project-1"><i class="fa fa-check"></i><b>6.0.9</b> 12. Finishing up the digitization project</a></li>
 </ul></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="useful-links.html"><a href="useful-links.html"><i class="fa fa-check"></i><b>A</b> Useful links</a></li>
 </ul>
 
       </nav>
@@ -234,10 +236,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">RUPDemo Digitization Guide</h1>
-<p class="date"><em>2024-09-11</em></p>
-</div>
 <div id="codestd" class="section level1 hasAnchor" number="1">
 <h1><span class="header-section-number">1</span> Coding Standards<a href="codestd.html#codestd" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>This document defines standard for formatting and organizing scripts, as well as guidelines for coding style to promote readability and consistency in our scripts. Shared standards will facilitate clear communication across the workflow of the RUPDemo project. These standards are derived from the <a href="https://style.tidyverse.org/index.html">tidyverse style guide</a>.</p>
@@ -377,7 +375,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb7-30"><a href="codestd.html#cb7-30" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-31"><a href="codestd.html#cb7-31" aria-hidden="true" tabindex="-1"></a>growth_plots <span class="ot">&lt;-</span> <span class="fu">lapply</span>( <span class="dv">1</span><span class="sc">:</span> <span class="dv">8</span>, plot_growth )</span>
 <span id="cb7-32"><a href="codestd.html#cb7-32" aria-hidden="true" tabindex="-1"></a><span class="fu">wrap_plots</span>( growth_plots ) <span class="sc">+</span> <span class="fu">plot_layout</span>( <span class="at">ncol =</span> <span class="dv">2</span> )</span></code></pre></div>
-<p><img src="rupdemo-webpage_files/figure-html/unnamed-chunk-9-1.png" width="768" style="display: block; margin: auto;" /></p>
+<p><img src="rupdemo-webpage_files/figure-html/unnamed-chunk-7-1.png" width="768" style="display: block; margin: auto;" /></p>
 <p>Each function is evaluated in its own environment which is not the global environment. Use <code>&lt;&lt;-</code> to assign objects to the global environment within a function (object will appear in the list in the Environment pane). Use <code>&lt;-</code> to assign objects within the function’s environment (object will not appear in the Environment pane and will only exist when you call of the function).</p>
 <p>Functions can contain complex conditional syntax, i.e. chains of <code>if else</code> statements to perform different actions under certain circumstances.</p>
 <p>In general, a function should perform a single action; write multiple functions to string together instead of nesting multiple complex actions within the same function.</p>
@@ -389,8 +387,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-
-<a href="projorg.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="projorg.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

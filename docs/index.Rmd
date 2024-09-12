@@ -6,3 +6,11 @@ date: "2024-09-11"
 documentclass: book
 github-repo: docs
 ---
+
+# Preface {-}
+
+This guide is an extension of the [PADRINO Digitization Guide](https://padrinodb.github.io/Padrino/index.html), aimed at expanding on the pre-processing and model fitting steps which precede the actual process of model digitization. Where the PADRINO Digitization Guide exists to support digitizers in prepping published IPMs to be added to the PADRINO database given that all information necessary to recreate the IPM is readily available, this guide supports digitizers in the more challenging task of parameterizing a new IPM from datasets which have not been modeled with an IPM before. Broadly, this guide serves as reference for digitizers in the RUPDemo project to become familiar with working with IPMs in R.
+
+The guide is divided into two sections. The first section, General Guidelines, consists of three chapters of reference material. The first chapter concerns coding best practices, the second chapter provides guidelines on project organization, and the third chapter is a step-by-step guide for the entire workflow. The second section, Adler Dataset Example, shows the workflow in action using a chart quadrat dataset published in [Chu et al., 2013](https://doi.org/10.1890/13-0121.1). This section is broken down into multiple chapters which consecutively add layers of complexity to the model. It is best to read the chapters in order.
+
+This is a living document which is currently still under construction. Chapter 7, an extension of the *Bouteloua gracilis* model which considers the effect of grazing treatment, is nearly completed and will be added to this document in the fall. A further extension which incorporates methods to conduct uncertainty analyses is planned and will be added soon. If you spot an error, please report the issue on [GitHub](https://github.com/aspen1030/RUPDemo/issues). 

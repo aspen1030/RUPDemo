@@ -277,20 +277,5 @@ Eventually, you will get the model(s) performing correctly and you can move on t
 ## Why do we construct the IPM twice?
 
 At this point, you might be asking "Why did I write the IPM from scratch if I actually needed to write it using ipmr for PADRINO?" and the answer is that troubleshooting in the PADRINO format is much harder to do. Writing the IPM from scratch first gives you the ability to go back and troubleshoot exactly the part of these complex models that is causing an issue. In the PADRINO format, even identifying the part of the model that is "wrong" is very challenging and unintuitive. Therefore, constructing the IPM from scratch gives us more opportunities to catch and correct mistakes.
-
-
-## Useful links
-
-I recommend that you make a folder in the bookmarks bar of your preferred web browser and bookmark all of these for easy access:
-
-- [PADRINO digitization guide](https://padrinodb.github.io/Padrino/index.html)
-
-  Jump to the section that explains each table in the template [here](https://padrinodb.github.io/Padrino/digitization-guide.html#the-tables)
-
-- [Incoming literature Google sheet](https://docs.google.com/spreadsheets/d/1jZbnlrOndybRfLTU1aKfxcQe60O8gSqBDoPiE5SFlrA/edit?usp=sharing)
-
-- [Sam's guide to writing model expressions in ipmr](https://github.com/padrinoDB/Padrino/blob/b797159d64283fa5ac88b79841544faf14a5aa98/metadata/digitization/pdb_expr_guide.pdf)
-
-- [Tons of info about ipmr](https://padrinodb.github.io/ipmr/)
   
   

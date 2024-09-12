@@ -1,0 +1,27 @@
+# (APPENDIX) Appendix {-}
+
+# Useful links
+
+Here is a collection of (nearly) all of the links which are referenced throughout this guide, nicely organized into a single location for easy reference! See Chapter \@ref(adwf) for a collection of links related to the Adler datasets.
+
+[PADRINO Digitization Guide](https://padrinodb.github.io/Padrino/index.html): Guide for reformatting IPMs for inclusion in the PADRINO database.
+
+[Tidyverse style guide](https://style.tidyverse.org/index.html): Guidelines for code formatting on which Chapter 1 is based, extended version.
+
+["Incoming literature" Google Sheet](https://docs.google.com/spreadsheets/d/1jZbnlrOndybRfLTU1aKfxcQe60O8gSqBDoPiE5SFlrA/edit?usp=sharing): Check out the publications which have already been added to PADRINO, find publications which still need to be digitized, and add publications you've found to the queue.
+
+[Sam's guide to Model Expressions](https://github.com/padrinoDB/Padrino/blob/b797159d64283fa5ac88b79841544faf14a5aa98/metadata/digitization/pdb_expr_guide.pdf): How to write vital rate models for IPMs.
+
+[Contacting authors for missing information](https://github.com/padrinoDB/Padrino/blob/main/metadata/digitization/author_contact_pdb.Rmd): Email template to contact authors for information you need to digitize their IPM.
+
+[What biome code do I use?](https://patrickbarks.shinyapps.io/biomes/): Input the coordinates of the sampled site here to obtain the three-letter biome code to put into the `Metadata` table.
+
+[The ipmr site](https://padrinodb.github.io/ipmr/): Information about the `ipmr` package that PADRINO is built on.
+
+["plantTracker: An R package to translate maps of plant occurrence into demographic data"](https://doi.org/10.1111/2041-210X.13950): Stears et al., 2022; publication introducing plantTracker.
+
+[Guide to plantTracker](https://github.com/aestears/plantTracker): Get started using plantTracker.
+
+[pdb Template](https://github.com/aspen1030/RUPDemo/blob/4e814fc5feb0cb06634cec51a56756b9fdf20c62/pdb_template.xlsx): Blank PADRINO database template Excel file to download and populate.
+
+

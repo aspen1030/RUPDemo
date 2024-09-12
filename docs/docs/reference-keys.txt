@@ -29,7 +29,6 @@ script-05_ipmr.r
 script-06_padrino.r
 final-steps-of-digitization
 why-do-we-construct-the-ipm-twice
-useful-links
 adwf
 introduction-to-the-adler-dataset
 publications-featuring-the-adler-dataset
@@ -77,3 +76,4 @@ comparing-the-year-specific-lambdas
 building-the-year-specific-ipms-with-ipmr
 populating-the-padrino-database-template-1
 finishing-up-the-digitization-project-1
+useful-links
