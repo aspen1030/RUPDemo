@@ -1,4 +1,4 @@
-# Adler Dataset: Extensions to the Mean IPM - Incorporating Year
+# Adler Dataset: Extensions to the Mean IPM - Incorporating Year {#adyr}
 
 In this chapter, we will introduce the effect of year into the vital rate models we fit in Chapter 4 for the mean IPM. We will build from Chapters 4 and 5 to continue exploring the data at the year-specific level, re-fit the vital rate models, and parameterize 13 new IPMs. We will then compare the lambda values of the year-specific IPMs to the lambda of the mean IPM.
 

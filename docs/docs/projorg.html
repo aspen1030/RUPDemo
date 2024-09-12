@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Page not found | RUPDemo Digitization Guide</title>
-  <meta name="description" content="Page not found | RUPDemo Digitization Guide" />
+  <title>2 Project Organization | RUPDemo Digitization Guide</title>
+  <meta name="description" content="2 Project Organization | RUPDemo Digitization Guide" />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Page not found | RUPDemo Digitization Guide" />
+  <meta property="og:title" content="2 Project Organization | RUPDemo Digitization Guide" />
   <meta property="og:type" content="book" />
   
   
   <meta name="github-repo" content="docs" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Page not found | RUPDemo Digitization Guide" />
+  <meta name="twitter:title" content="2 Project Organization | RUPDemo Digitization Guide" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-
+<link rel="prev" href="codestd.html"/>
+<link rel="next" href="genwf.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -234,19 +234,659 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="page-not-found" class="section level1">
-<h1>Page not found</h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<div id="projorg" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">2</span> Project Organization<a href="projorg.html#projorg" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Each publication or dataset you work with will need its own R project to contain all of the work you will do to digitize the model and get it ready to be added to the PADRINO database. More information about selecting a publication to digitize and initializing a project can be found in Chapter 3: General Workflow.</p>
+<p>All of your projects should be kept together in a folder. Therefore, it is important that you title your R projects consistently and descriptively. Generally, using the first author’s last name and the year of publication separated by an underscore is most appropriate. There may be some instances where appending more information, like the journal or the focal species, is necessary.</p>
+<p>Your folder of projects should be synced [SHARED CLOUD SERVICE]. This gives us all access to your scripts as you are working on them, which will be helpful when you are working remotely.</p>
+<div id="folder-organization" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Folder organization<a href="projorg.html#folder-organization" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Within the project home folder, you should create three subfolders:</p>
+<ul>
+<li>‘R’, which will contain all of your scripts<br />
+</li>
+<li>‘data’, which will contain all data (more on this in a moment)<br />
+</li>
+<li>‘results’, which will contain any figures you create</li>
+</ul>
+<p>You may have other files that you want to keep in a project, such as a PDF of the full article text, supplemental files/appendices, etc. For the most part, these can also be kept in the project home folder, EXCEPT if they contain readable data files (Excel tables or .csv, etc). Any data files that you might use in your digitization should go into the ‘data’ folder, otherwise there is no reason to include them in the R project. Depending on the publication you’re working with, the amount of extra files you want to keep on-hand might be quite a lot. In that case, you should create a fourth subfolder titled ‘supplement’ and store everything in there.</p>
+<div id="r-folder" class="section level3 hasAnchor" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> R folder<a href="projorg.html#r-folder" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Scripts in the ‘R’ folder should be given names beginning with numbers indicating the order in which they should be executed. The first script will almost always be something like “01_DataFormatting.R” in which you will prepare the data you downloaded or otherwise extracted to get it ready for modeling. The rest of the scripts you might write are detailed in Chapter 3: General Workflow. The file names suggested in that script can be modified by adding additional details about the dataset you are working with, if it helps you to better keep track of your work. Whatever you decide, please try to be consistent within each project!</p>
+</div>
+<div id="data-folder" class="section level3 hasAnchor" number="2.1.2">
+<h3><span class="header-section-number">2.1.2</span> Data folder<a href="projorg.html#data-folder" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The data folder contains both the files with the original data, and the output of formatting that same data. Always be sure to use descriptive names so you don’t mix up the raw data and the new data you worked so hard to put together!</p>
+</div>
+<div id="results-folder" class="section level3 hasAnchor" number="2.1.3">
+<h3><span class="header-section-number">2.1.3</span> Results folder<a href="projorg.html#results-folder" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Use the results folder to store the plots you need to make to check data before or during model fitting. To save yourself the hassle of recreating plots every time someone needs to take a look at them, export them each time you update them.</p>
+</div>
+<div id="example-of-folder-organization" class="section level3 hasAnchor" number="2.1.4">
+<h3><span class="header-section-number">2.1.4</span> Example of folder organization<a href="projorg.html#example-of-folder-organization" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<table class="gmisc_table" style="border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;">
+<tbody>
+<tr style="border-top: 2px solid grey;">
+<td style="border-top: 2px solid grey; text-align: left;">
+📁 Author_year_species
+</td>
+<td style="border-top: 2px solid grey; text-align: left;">
+</td>
+<td style="border-top: 2px solid grey; text-align: left;">
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+↳
+</td>
+<td style="text-align: left;">
+<span style="color:dodgerblue;">🅁</span> Author_year_species.Rproj
+</td>
+<td style="text-align: left;">
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+📁 data
+</td>
+<td style="text-align: left;">
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+↳
+</td>
+<td style="text-align: left;">
+<span style="color:forestgreen;">🅇</span> raw_data.csv
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+<span style="color:forestgreen;">🅇</span> survival_data.csv
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+<span style="color:forestgreen;">🅇</span> growth_data.csv
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+<span style="color:forestgreen;">🅇</span> recruitment_data.csv
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+📁 R
+</td>
+<td style="text-align: left;">
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+↳
+</td>
+<td style="text-align: left;">
+<span style="color:dodgerblue;">Ⓡ</span> 01_DataFormatting.R
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+<span style="color:dodgerblue;">Ⓡ</span> 02_Plotting.R
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+<span style="color:dodgerblue;">Ⓡ</span> 03_VitalRates.R
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+<span style="color:dodgerblue;">Ⓡ</span> 04_IPMScratch.R
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+<span style="color:dodgerblue;">Ⓡ</span> 05_ipmr.R
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+<span style="color:dodgerblue;">Ⓡ</span> 06_PADRINO.R
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+📁 results
+</td>
+<td style="text-align: left;">
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+↳
+</td>
+<td style="text-align: left;">
+🖻 survival_plot.png
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+🖻 growth_plot.png
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+🖻 recruitment_plot.png
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+📁 supplement
+</td>
+<td style="text-align: left;">
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+↳
+</td>
+<td style="text-align: left;">
+🖺 Author_year_Appendix1.pdf
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+🖺 Author_year_Appendix2.pdf
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+📁 temp
+</td>
+<td style="text-align: left;">
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+↳
+</td>
+<td style="text-align: left;">
+<span style="color:forestgreen;">🅇</span> test_data.csv
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+🖺 Author_year_fulltext.pdf
+</td>
+<td style="text-align: left;">
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+<span style="color:forestgreen;">🅇</span> Author_year_species_pdb.xlsx
+</td>
+<td style="text-align: left;">
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+<span style="color:dodgerblue;">Ⓡ</span> Author_year_species_wrapper.R
+</td>
+<td style="text-align: left;">
+</td>
+</tr>
+<tr>
+<td style="border-bottom: 2px solid grey; text-align: left;">
+</td>
+<td style="border-bottom: 2px solid grey; text-align: left;">
+🖹 Author_year_species_notes.txt
+</td>
+<td style="border-bottom: 2px solid grey; text-align: left;">
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+</div>
+</div>
+<div id="more-complicated-datasets" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> More complicated datasets<a href="projorg.html#more-complicated-datasets" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>For some datasets, the guidelines provided here are fully comprehensive. But some datasets may not be so simple, and they might require you to work on only a subset of the data at a time.</p>
+<p>In general, if it is a case where you are splitting the dataset into two subsets, or you are working with two slightly different models, it is fine to just add an appendix to your file names. Examples of when this is the case include:</p>
+<ul>
+<li>A model excluding the seedbank, and a model including the seedbank:
+<ul>
+<li>03_IPMScratch_noseedbank.R<br />
+</li>
+<li>03_IPMScratch_seedbank.R</li>
+</ul></li>
+<li>Two species (abbreviated with first 3 letters of genus &amp; species):
+<ul>
+<li>03_IPMScratch_Andger.R<br />
+</li>
+<li>03_IPMScratch_Boucur.R</li>
+</ul></li>
+</ul>
+However, some datasets may necessitate the use of more than two different models or subsets. In these cases, it is best to create separate subfolders. Whether these subfolders go into the project home folder, or into the standard subfolders, it depends on the raw data. If you download more than one raw data file corresponding to each IPM (or set of IPMs), then the new subfolders should go into the project home folder. Ex.:
+<center>
+<table class="gmisc_table" style="border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;">
+<tbody>
+<tr style="border-top: 2px solid grey;">
+<td style="border-top: 2px solid grey; text-align: left;">
+📁 Author_year
+</td>
+<td style="border-top: 2px solid grey; text-align: left;">
+</td>
+<td style="border-top: 2px solid grey; text-align: left;">
+</td>
+<td style="border-top: 2px solid grey; text-align: left;">
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+↳
+</td>
+<td style="text-align: left;">
+📁 SpeciesA
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+↳
+</td>
+<td style="text-align: left;">
+📁 data
+</td>
+<td style="text-align: left;">
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+↳
+</td>
+<td style="text-align: left;">
+<span style="color:forestgreen;">🅇</span> raw_data_speciesA.csv
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+📁 R
+</td>
+<td style="text-align: left;">
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+📁 results
+</td>
+<td style="text-align: left;">
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+📁 SpeciesB
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+↳
+</td>
+<td style="text-align: left;">
+📁 data
+</td>
+<td style="text-align: left;">
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+↳
+</td>
+<td style="text-align: left;">
+<span style="color:forestgreen;">🅇</span> raw_data_speciesB.csv
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+📁 R
+</td>
+<td style="text-align: left;">
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+📁 results
+</td>
+<td style="text-align: left;">
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+📁 SpeciesB
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+↳
+</td>
+<td style="text-align: left;">
+📁 data
+</td>
+<td style="text-align: left;">
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+↳
+</td>
+<td style="text-align: left;">
+<span style="color:forestgreen;">🅇</span> raw_data_speciesB.csv
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+📁 R
+</td>
+<td style="text-align: left;">
+</td>
+</tr>
+<tr>
+<td style="border-bottom: 2px solid grey; text-align: left;">
+</td>
+<td style="border-bottom: 2px solid grey; text-align: left;">
+</td>
+<td style="border-bottom: 2px solid grey; text-align: left;">
+📁 results
+</td>
+<td style="border-bottom: 2px solid grey; text-align: left;">
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+Conversely, if the raw data are all contained within a single file (or multiple files all containing some kind of data for every model), then the subfolders should be nested within the standard subfolders. This is because you may have some scripts which apply to all versions of the model, like the first data formatting script, but then you will write different scripts for each version of the model that should be kept separate. Ex.:
+<center>
+<table class="gmisc_table" style="border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;">
+<tbody>
+<tr style="border-top: 2px solid grey;">
+<td style="border-top: 2px solid grey; text-align: left;">
+📁 Author_year
+</td>
+<td style="border-top: 2px solid grey; text-align: left;">
+</td>
+<td style="border-top: 2px solid grey; text-align: left;">
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+↳
+</td>
+<td style="text-align: left;">
+📁 data
+</td>
+<td style="text-align: left;">
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+↳
+</td>
+<td style="text-align: left;">
+<span style="color:forestgreen;">🅇</span> raw_data_all_species.csv
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+📁 SpeciesA
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+📁 SpeciesB
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+📁 SpeciesC
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+📁 R
+</td>
+<td style="text-align: left;">
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+↳
+</td>
+<td style="text-align: left;">
+<span style="color:dodgerblue;">Ⓡ</span> 01_DataFormatting.R
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+📁 SpeciesA
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+📁 SpeciesB
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+📁 SpeciesC
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+📁 results
+</td>
+<td style="text-align: left;">
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+↳
+</td>
+<td style="text-align: left;">
+📁 SpeciesA
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+</td>
+<td style="text-align: left;">
+📁 SpeciesB
+</td>
+</tr>
+<tr>
+<td style="border-bottom: 2px solid grey; text-align: left;">
+</td>
+<td style="border-bottom: 2px solid grey; text-align: left;">
+</td>
+<td style="border-bottom: 2px solid grey; text-align: left;">
+📁 SpeciesC
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+<p>Ultimately, the decision to split into different subfolders and how to nest these folders is hard to make <em>a priori</em>. You might discover along the way that you need to simplify the model before tackling the whole thing, and you might end up making way more than two versions of a model. It is worthwhile to spend some extra time reorganizing your project if you think it will make it easier to understand.</p>
+<p>Finally, always be sure to explain any project structure/nestedness in the wrapper file (more details in Chapter 3: General Workflow).</p>
+
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-
+<a href="codestd.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="genwf.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

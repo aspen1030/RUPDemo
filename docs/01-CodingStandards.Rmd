@@ -6,14 +6,14 @@ output: bookdown::gitbook
 
 # (PART) General Guidelines {-}
 
-# Coding Standards
+# Coding Standards {#codestd}
 
 This document defines standard for formatting and organizing scripts, as well as guidelines for coding style to promote readability and consistency in our scripts. Shared standards will facilitate clear communication across the workflow of the RUPDemo project. These standards are derived from the [tidyverse style guide](https://style.tidyverse.org/index.html).
 
 
 ## Starting a new script
 
-The first step of starting a new script is to give the file a short, descriptive name. The name should ideally begin with a number indicating the order in which the scripts have been written within the project followed by an underscore and a few words describing the main function of the script. More information about when to start a new script and how to organize a project can be found in Chapter 2: Project Organization.
+The first step of starting a new script is to give the file a short, descriptive name. The name should ideally begin with a number indicating the order in which the scripts have been written within the project followed by an underscore and a few words describing the main function of the script. More information about when to start a new script and how to organize a project can be found in Chapter \@ref(projorg) : Project Organization.
 
 Start the script by providing metadata about the script. Here is an example of the first 18 lines of a draft of this document:
 

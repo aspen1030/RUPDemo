@@ -1,4 +1,4 @@
-# Project Organization
+# Project Organization {#projorg}
 
 Each publication or dataset you work with will need its own R project to contain all of the work you will do to digitize the model and get it ready to be added to the PADRINO database. More information about selecting a publication to digitize and initializing a project can be found in Chapter 3: General Workflow.
 

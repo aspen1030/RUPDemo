@@ -1,4 +1,4 @@
-# Adler Dataset: Extensions to the Mean IPM
+# Adler Dataset: Extensions to the Mean IPM {#adex}
 
 In Chapter 4, we followed the workflow to produce the mean IPM from our example dataset, *Bouteloua gracilis* from the Colorado site of the Adler dataset. However, this dataset had the potential to create as many as 125 other IPMs which we did not explore! This document aims to show how we constructed IPMs for each specific yearly transition, and how we might approach incorporating different treatments into our IPMs.
 

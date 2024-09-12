@@ -1,4 +1,4 @@
-# General Workflow
+# General Workflow {#genwf}
 
 In the RUPDemo project, we will digitize IPMs from published studies, and directly from raw data. In the first scenario, you will recreate IPMs exactly how they are published in order to reproduce the exact same results from the paper, with the only difference being that you will reformat the model to be included within the PADRINO database. In the second scenario, you will completely parameterize an IPM from scratch based on a published dataset that lacks an IPM. Most of the "easiest" publications of the first type have already been added to PADRINO, leaving much more complicated datasets for us to work with. Most of these fall somewhere between the two types of digitization tasks, involving extensive data preparation and parameterization of vital rate models based on limited information reported in the publication. 
 

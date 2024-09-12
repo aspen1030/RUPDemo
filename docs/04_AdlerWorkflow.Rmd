@@ -1,6 +1,6 @@
 # (PART) Adler Dataset Example {-}
 
-# Adler Dataset: Example of Workflow
+# Adler Dataset: Example of Workflow {#adwf}
 
 At this point, we've planned out a roadmap for digitization in a general sense, but how do these steps actually happen in a real example? The following sections walk through the digitization of an IPM that Aldo and I worked on last year, using part of a dataset that you will soon become very familiar with! All of the code to reproduce the IPM is included, with extensive commentary to explain the different decisions we made along the way.
 
