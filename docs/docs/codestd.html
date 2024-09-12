@@ -377,7 +377,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb7-30"><a href="codestd.html#cb7-30" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-31"><a href="codestd.html#cb7-31" aria-hidden="true" tabindex="-1"></a>growth_plots <span class="ot">&lt;-</span> <span class="fu">lapply</span>( <span class="dv">1</span><span class="sc">:</span> <span class="dv">8</span>, plot_growth )</span>
 <span id="cb7-32"><a href="codestd.html#cb7-32" aria-hidden="true" tabindex="-1"></a><span class="fu">wrap_plots</span>( growth_plots ) <span class="sc">+</span> <span class="fu">plot_layout</span>( <span class="at">ncol =</span> <span class="dv">2</span> )</span></code></pre></div>
-<p><img src="rupdemo-webpage_files/figure-html/unnamed-chunk-7-1.png" width="768" style="display: block; margin: auto;" /></p>
+<p><img src="rupdemo-webpage_files/figure-html/unnamed-chunk-9-1.png" width="768" style="display: block; margin: auto;" /></p>
 <p>Each function is evaluated in its own environment which is not the global environment. Use <code>&lt;&lt;-</code> to assign objects to the global environment within a function (object will appear in the list in the Environment pane). Use <code>&lt;-</code> to assign objects within the function’s environment (object will not appear in the Environment pane and will only exist when you call of the function).</p>
 <p>Functions can contain complex conditional syntax, i.e. chains of <code>if else</code> statements to perform different actions under certain circumstances.</p>
 <p>In general, a function should perform a single action; write multiple functions to string together instead of nesting multiple complex actions within the same function.</p>

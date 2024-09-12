@@ -581,7 +581,7 @@ y <- resid( gr_mod_yr2 )^2
 gr_var <- nls( y ~ a * exp( b * x ), start = list( a = 1, b = 0 ) )
 ```
 
-This is the same model as the one we wrote in Chapter 4 \@ref(growvr4), as the growth variance model does not change by year. 
+This is the same model as the one we wrote in Chapter \@ref(growvr4), as the growth variance model does not change by year. 
 
 #### Recruitment model
 
@@ -819,7 +819,7 @@ fy <- function( y, pars, h ){
 ```
 
 
-Next we can assemble the kernel function. I have removed the comments to save space; refer to Chapter 4 \@ref(buildipm4) for further explanation.
+Next we can assemble the kernel function. I have removed the comments to save space; refer to Chapter \@ref(buildipm4) for further explanation.
 ```{r}
 kernel <- function( pars ) {
   
@@ -1063,7 +1063,7 @@ all_pars <- c( pars_cons_wide, pars_var_wide )
 ```
 
 
-Now let's build the proto-IPM. Some comments have been included in the following code to explain the new pieces, but refer back to Chapter 4 \@ref(ipmr4) for more details about constructing the IPM in ipmr. I'm jumping right in to the full proto-IPM with both kernels. Note the use of the `_yr` suffix on all terms AND expressions which vary across the years, every time they are mentioned!!!
+Now let's build the proto-IPM. Some comments have been included in the following code to explain the new pieces, but refer back to Chapter \@ref(ipmr4) for more details about constructing the IPM in ipmr. I'm jumping right in to the full proto-IPM with both kernels. Note the use of the `_yr` suffix on all terms AND expressions which vary across the years, every time they are mentioned!!!
 ```{r fig.align="center", fig.height=4, fig.width=6, message=FALSE, warning=FALSE}
 library( ipmr )
 

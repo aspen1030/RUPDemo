@@ -436,7 +436,7 @@ Since we are building these new IPMs from the same dataset we used to parameteri
 <span id="cb131-17"><a href="adyr.html#cb131-17" aria-hidden="true" tabindex="-1"></a>              <span class="at">labeller =</span> <span class="fu">labeller</span>( <span class="at">size =</span> size_labs ) ) <span class="sc">+</span></span>
 <span id="cb131-18"><a href="adyr.html#cb131-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>( <span class="at">x =</span> <span class="st">&quot;log( size )&quot;</span>,</span>
 <span id="cb131-19"><a href="adyr.html#cb131-19" aria-hidden="true" tabindex="-1"></a>        <span class="at">y =</span> <span class="st">&quot;Frequency&quot;</span> )</span></code></pre></div>
-<p><img src="rupdemo-webpage_files/figure-html/unnamed-chunk-62-1.png" width="576" style="display: block; margin: auto;" /></p>
+<p><img src="rupdemo-webpage_files/figure-html/unnamed-chunk-65-1.png" width="576" style="display: block; margin: auto;" /></p>
 <div class="sourceCode" id="cb132"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb132-1"><a href="adyr.html#cb132-1" aria-hidden="true" tabindex="-1"></a><span class="co"># dev.off( )</span></span></code></pre></div>
 <p>From this plot, we can see that the distributions of size shift from time t0 to time t1 in all years, particularly with regards to the smallest individuals. A large loss in these individuals from time t0 to time t1 without noticeable increases in the middle size classes indicates high seedling mortality in a given year, which is most pronounced in 1999-2007. In some years, we see a shift in the main distribution from smaller sizes in time t0 to slightly larger sizes in time t1, which we would expect, as this suggests that individuals are indeed growing. Overall, since there do seem to be differences in the patterns between years, so modeling the data with the random effect of year seems like a reasonable choice. Additionally, the lower and upper bounds of size seem quite consistent across all years, so keeping the limits of integration constant across all years is also a reasonable choice.</p>
 <p>Let’s now plot the survival data by year. We must first setup a function which bins the survival data by size for each year, so that we can visualize the data as probabilities of survival for a given size class. We then apply the function across 13 years to create a list that we can plot faceted by year.</p>
@@ -514,7 +514,7 @@ Since we are building these new IPMs from the same dataset we used to parameteri
 <span id="cb133-72"><a href="adyr.html#cb133-72" aria-hidden="true" tabindex="-1"></a>         <span class="at">panel.spacing         =</span> <span class="fu">unit</span>( <span class="st">&#39;0.5&#39;</span>, <span class="at">unit =</span> <span class="st">&#39;mm&#39;</span> ) ) <span class="sc">+</span></span>
 <span id="cb133-73"><a href="adyr.html#cb133-73" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>( <span class="at">x =</span> <span class="fu">expression</span>( <span class="st">&#39;log(size)&#39;</span>[t0] ),</span>
 <span id="cb133-74"><a href="adyr.html#cb133-74" aria-hidden="true" tabindex="-1"></a>        <span class="at">y =</span> <span class="fu">expression</span>( <span class="st">&#39;Survival to time t1&#39;</span> ) )</span></code></pre></div>
-<p><img src="rupdemo-webpage_files/figure-html/unnamed-chunk-63-1.png" width="960" style="display: block; margin: auto;" /></p>
+<p><img src="rupdemo-webpage_files/figure-html/unnamed-chunk-66-1.png" width="960" style="display: block; margin: auto;" /></p>
 <div class="sourceCode" id="cb134"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb134-1"><a href="adyr.html#cb134-1" aria-hidden="true" tabindex="-1"></a><span class="co"># dev.off( )</span></span></code></pre></div>
 <p>As always happens in demographic data, the relationship between survival probability at time t1 and size a time t0 is variable through years, further justifying our choice to create an IPM for each year.</p>
 <p>Next, we should plot the growth data faceted by year.</p>
@@ -546,7 +546,7 @@ Since we are building these new IPMs from the same dataset we used to parameteri
 <span id="cb135-26"><a href="adyr.html#cb135-26" aria-hidden="true" tabindex="-1"></a>         <span class="at">panel.spacing         =</span> <span class="fu">unit</span>( <span class="st">&#39;0.5&#39;</span>, <span class="at">unit =</span> <span class="st">&#39;mm&#39;</span> ) ) <span class="sc">+</span></span>
 <span id="cb135-27"><a href="adyr.html#cb135-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>( <span class="at">x =</span> <span class="fu">expression</span>( <span class="st">&#39;log( size )&#39;</span>[t0] ),</span>
 <span id="cb135-28"><a href="adyr.html#cb135-28" aria-hidden="true" tabindex="-1"></a>        <span class="at">y =</span> <span class="fu">expression</span>( <span class="st">&#39;log( size )&#39;</span>[t1] ) )</span></code></pre></div>
-<p><img src="rupdemo-webpage_files/figure-html/unnamed-chunk-64-1.png" width="960" style="display: block; margin: auto;" /></p>
+<p><img src="rupdemo-webpage_files/figure-html/unnamed-chunk-67-1.png" width="960" style="display: block; margin: auto;" /></p>
 <div class="sourceCode" id="cb136"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb136-1"><a href="adyr.html#cb136-1" aria-hidden="true" tabindex="-1"></a><span class="co"># dev.off( )</span></span></code></pre></div>
 <p>Here, we see the effect of transition year on the growth vital rate. Some transition years show less spread in the data (03-04) compared to others (01-02), and we can start to see how the different years might be modeled with different slopes and/or intercepts.</p>
 <p>Now we can plot the recruitment data faceted by year. For visualiztion purposes, I’ve filtered out the largest value (the single year where over 600 recruits were added to the dataset).</p>
@@ -586,7 +586,7 @@ Since we are building these new IPMs from the same dataset we used to parameteri
 <span id="cb139-22"><a href="adyr.html#cb139-22" aria-hidden="true" tabindex="-1"></a>         <span class="at">panel.spacing         =</span> <span class="fu">unit</span>( <span class="st">&#39;0.5&#39;</span>, <span class="at">unit =</span> <span class="st">&#39;mm&#39;</span> ) ) <span class="sc">+</span></span>
 <span id="cb139-23"><a href="adyr.html#cb139-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>( <span class="at">x =</span> <span class="fu">expression</span>( <span class="st">&#39;Number of adults &#39;</span>[ t0] ),</span>
 <span id="cb139-24"><a href="adyr.html#cb139-24" aria-hidden="true" tabindex="-1"></a>        <span class="at">y =</span> <span class="fu">expression</span>( <span class="st">&#39;Number of recruits &#39;</span>[ t1] ) )</span></code></pre></div>
-<p><img src="rupdemo-webpage_files/figure-html/unnamed-chunk-65-1.png" width="960" style="display: block; margin: auto;" /></p>
+<p><img src="rupdemo-webpage_files/figure-html/unnamed-chunk-68-1.png" width="960" style="display: block; margin: auto;" /></p>
 <div class="sourceCode" id="cb140"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb140-1"><a href="adyr.html#cb140-1" aria-hidden="true" tabindex="-1"></a><span class="co"># dev.off( )</span></span></code></pre></div>
 <p>As with the other vital rates, we see some differences between the years which we will incorporate into our IPM by taking a year-specific per-capita mean recruitment rate across all plots.</p>
 <p>We should also take a moment to plot histograms of the recruit size data, so we can determine if we should take year-specific means and standard deviations of recruit size, or if we expect that taking the global mean and standard deviation would be sufficient.</p>
@@ -603,7 +603,7 @@ Since we are building these new IPMs from the same dataset we used to parameteri
 <span id="cb141-11"><a href="adyr.html#cb141-11" aria-hidden="true" tabindex="-1"></a>              <span class="at">nrow =</span> <span class="dv">4</span> ) <span class="sc">+</span></span>
 <span id="cb141-12"><a href="adyr.html#cb141-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>( <span class="at">x =</span> <span class="fu">expression</span>(<span class="st">&#39;log( size )&#39;</span>[t0]),</span>
 <span id="cb141-13"><a href="adyr.html#cb141-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">y =</span> <span class="st">&quot;Frequency&quot;</span> )</span></code></pre></div>
-<p><img src="rupdemo-webpage_files/figure-html/unnamed-chunk-66-1.png" width="960" style="display: block; margin: auto;" /></p>
+<p><img src="rupdemo-webpage_files/figure-html/unnamed-chunk-69-1.png" width="960" style="display: block; margin: auto;" /></p>
 <div class="sourceCode" id="cb142"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb142-1"><a href="adyr.html#cb142-1" aria-hidden="true" tabindex="-1"></a><span class="co"># dev.off( )</span></span></code></pre></div>
 <p>Note that I’ve used the <code>"free_y"</code> option in <code>facet_wrap()</code> to allow the y-axis to be fitted to each panel individually, while the x-axis remains fixed across all panels. This ensures that we can actually compare the distributions across years, even though 2002 has an order of magnitude more recruits than any other year. While there is some variability in the distributions across the years, the majority of recruits enter the population at the minimum size and there doesn’t seem to be any particularly wild years. Keep in mind also that the sizes on the x-axis are log-transformed; we’re dealing with incredibly small individuals overall. While the differences may seem pronounced on this scale, it is important to keep in mind the biological scale of these individuals. An individual with log(size) around -10 has an area of 0.005 cm<span class="math inline">\(^2\)</span>, whereas an individual with log(size) of -6 has an area of 0.25 cm<span class="math inline">\(^2\)</span>. These are both very, very small plants; differences in size at this scale may very well be attributable to errors in how the plants were recorded on the paper maps or digitized. We will therefore keep the recruitment size parameters constant throughout all years.</p>
 </div>
@@ -649,7 +649,7 @@ Since we are building these new IPMs from the same dataset we used to parameteri
 <span id="cb144-29"><a href="adyr.html#cb144-29" aria-hidden="true" tabindex="-1"></a><span class="co"># png( &#39;results/Bou_gra_yr/survival_pred.png&#39;, width = 10, height = 8, units = &quot;in&quot;, res = 150 )</span></span>
 <span id="cb144-30"><a href="adyr.html#cb144-30" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb144-31"><a href="adyr.html#cb144-31" aria-hidden="true" tabindex="-1"></a>surv_years</span></code></pre></div>
-<p><img src="rupdemo-webpage_files/figure-html/unnamed-chunk-68-1.png" width="960" style="display: block; margin: auto;" /></p>
+<p><img src="rupdemo-webpage_files/figure-html/unnamed-chunk-71-1.png" width="960" style="display: block; margin: auto;" /></p>
 <div class="sourceCode" id="cb145"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb145-1"><a href="adyr.html#cb145-1" aria-hidden="true" tabindex="-1"></a><span class="co"># dev.off( )</span></span></code></pre></div>
 <p>These plots show the year-specific models plotted over the binned data. Some years seem to be fit better than others, but overall the model describes the data fairly well.</p>
 </div>
@@ -687,7 +687,7 @@ Since we are building these new IPMs from the same dataset we used to parameteri
 <span id="cb147-23"><a href="adyr.html#cb147-23" aria-hidden="true" tabindex="-1"></a><span class="co"># png( &#39;results/Bou_gra_yr/grow_pred.png&#39;, width = 10, height = 6, units = &quot;in&quot;, res = 150 )</span></span>
 <span id="cb147-24"><a href="adyr.html#cb147-24" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb147-25"><a href="adyr.html#cb147-25" aria-hidden="true" tabindex="-1"></a>grow_years</span></code></pre></div>
-<p><img src="rupdemo-webpage_files/figure-html/unnamed-chunk-70-1.png" width="960" style="display: block; margin: auto;" /></p>
+<p><img src="rupdemo-webpage_files/figure-html/unnamed-chunk-73-1.png" width="960" style="display: block; margin: auto;" /></p>
 <div class="sourceCode" id="cb148"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb148-1"><a href="adyr.html#cb148-1" aria-hidden="true" tabindex="-1"></a><span class="co"># dev.off( )</span></span></code></pre></div>
 <p>From these plots, it is fairly difficult to see how each plot has a unique model intercept and slope, since each year seems to be fit pretty well. In general, most year-specific models are underestimating the size at time t1 of the largest individuals, but the regression line seems pretty great otherwise.</p>
 <p>Before we move onto the growth variance model, let’s take a moment to consider if this really is the best model. With both the survival and growth models, we assumed that the simplest model with only linear terms best describes the data. With the survival model, I will just reveal that including nonlinear terms causes the model to fail to converge. It’s hard to visually confirm that our model fits well without linear terms due to the more abstract nature of the logistic regression, but with our linear growth model, we can see in the previous plot that there might be room for improvement. Let’s compare this growth model to two other models which include nonlinear terms. The first will include a quadratic term, and the second will include a quadratic term and a cubic term. The expressions for these models are:
@@ -733,17 +733,17 @@ Since we are building these new IPMs from the same dataset we used to parameteri
 <span id="cb151-23"><a href="adyr.html#cb151-23" aria-hidden="true" tabindex="-1"></a><span class="co"># png( &#39;results/Bou_gra_yr/grow_pred_2.png&#39;, width = 10, height = 6, units = &quot;in&quot;, res = 150 )</span></span>
 <span id="cb151-24"><a href="adyr.html#cb151-24" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb151-25"><a href="adyr.html#cb151-25" aria-hidden="true" tabindex="-1"></a>grow_years2</span></code></pre></div>
-<p><img src="rupdemo-webpage_files/figure-html/unnamed-chunk-72-1.png" width="960" style="display: block; margin: auto;" /></p>
+<p><img src="rupdemo-webpage_files/figure-html/unnamed-chunk-75-1.png" width="960" style="display: block; margin: auto;" /></p>
 <div class="sourceCode" id="cb152"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb152-1"><a href="adyr.html#cb152-1" aria-hidden="true" tabindex="-1"></a><span class="co"># dev.off( )</span></span></code></pre></div>
 <p>And just for fun, I’ll also plot the model with the cubic term and we can compare all three models:
-<img src="rupdemo-webpage_files/figure-html/unnamed-chunk-73-1.png" width="1248" style="display: block; margin: auto;" /></p>
+<img src="rupdemo-webpage_files/figure-html/unnamed-chunk-76-1.png" width="1248" style="display: block; margin: auto;" /></p>
 <p>Here, I’ve plotted the model with only the linear term on the top row (red line), the model with the added quadratic term on the middle row (green line), and the model with the added cubic term on the bottom row (blue line). I have also only plotted 2003 through 2009 for improved readability. First, notice how the green line fits the largest and smallest individuals much better than the red. Second, notice that there is virtually no change when comparing the fit of the green vs the blue line. Therefore, choosing the model with the quadratic term but without the cubic term makes the most sense here.</p>
 <p>Now that we’ve decided on which growth model we will choose, we need to fit the growth variance model.</p>
 <div class="sourceCode" id="cb153"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb153-1"><a href="adyr.html#cb153-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">fitted</span>( gr_mod_yr2 )</span>
 <span id="cb153-2"><a href="adyr.html#cb153-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">resid</span>( gr_mod_yr2 )<span class="sc">^</span><span class="dv">2</span></span>
 <span id="cb153-3"><a href="adyr.html#cb153-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb153-4"><a href="adyr.html#cb153-4" aria-hidden="true" tabindex="-1"></a>gr_var <span class="ot">&lt;-</span> <span class="fu">nls</span>( y <span class="sc">~</span> a <span class="sc">*</span> <span class="fu">exp</span>( b <span class="sc">*</span> x ), <span class="at">start =</span> <span class="fu">list</span>( <span class="at">a =</span> <span class="dv">1</span>, <span class="at">b =</span> <span class="dv">0</span> ) )</span></code></pre></div>
-<p>This is the same model as the one we wrote in Chapter 4 <a href="adwf.html#growvr4">4.4.8.1</a>, as the growth variance model does not change by year.</p>
+<p>This is the same model as the one we wrote in Chapter <a href="adwf.html#growvr4">4.4.8.1</a>, as the growth variance model does not change by year.</p>
 </div>
 <div id="recruitment-model-3" class="section level4 hasAnchor" number="6.0.5.3">
 <h4><span class="header-section-number">6.0.5.3</span> Recruitment model<a href="adyr.html#recruitment-model-3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
@@ -784,7 +784,7 @@ Since we are building these new IPMs from the same dataset we used to parameteri
 <span id="cb158-11"><a href="adyr.html#cb158-11" aria-hidden="true" tabindex="-1"></a>                    <span class="at">alpha     =</span> <span class="fl">0.5</span> ) <span class="sc">+</span></span>
 <span id="cb158-12"><a href="adyr.html#cb158-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>( <span class="at">x =</span> <span class="st">&quot;Observed per capita recruitment&quot;</span>,</span>
 <span id="cb158-13"><a href="adyr.html#cb158-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">y =</span> <span class="st">&quot;Predicted per capita recruitment&quot;</span> )</span></code></pre></div>
-<p><img src="rupdemo-webpage_files/figure-html/unnamed-chunk-79-1.png" width="576" style="display: block; margin: auto;" /></p>
+<p><img src="rupdemo-webpage_files/figure-html/unnamed-chunk-82-1.png" width="576" style="display: block; margin: auto;" /></p>
 <div class="sourceCode" id="cb159"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb159-1"><a href="adyr.html#cb159-1" aria-hidden="true" tabindex="-1"></a><span class="co"># dev.off( )</span></span></code></pre></div>
 <p>On the x axis, we have the observed per-capita recruitment rates and on the y axis are the corresponding modeled per-capita recruitment rates. Each point shows a single transition year. Most points are very close to the 1:1 line, indicating the model predicts most years well. We see that the two points with the highest observed recruitment are less accurately predicted by the model, but this is not so unrealistic: recall that one plot with over 600 recruits in a single year, which is clearly going to have a strong influence on the mean recruitment rate of that year.</p>
 </div>
@@ -930,7 +930,7 @@ And how we wrote the model expression in R:</p>
 <span id="cb168-7"><a href="adyr.html#cb168-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>( f )</span>
 <span id="cb168-8"><a href="adyr.html#cb168-8" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb168-9"><a href="adyr.html#cb168-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
-<p>Next we can assemble the kernel function. I have removed the comments to save space; refer to Chapter 4 <a href="adwf.html#buildipm4">4.4.9</a> for further explanation.</p>
+<p>Next we can assemble the kernel function. I have removed the comments to save space; refer to Chapter <a href="adwf.html#buildipm4">4.4.9</a> for further explanation.</p>
 <div class="sourceCode" id="cb169"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb169-1"><a href="adyr.html#cb169-1" aria-hidden="true" tabindex="-1"></a>kernel <span class="ot">&lt;-</span> <span class="cf">function</span>( pars ) {</span>
 <span id="cb169-2"><a href="adyr.html#cb169-2" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb169-3"><a href="adyr.html#cb169-3" aria-hidden="true" tabindex="-1"></a>  n   <span class="ot">&lt;-</span> pars<span class="sc">$</span>mat_siz</span>
@@ -1122,7 +1122,7 @@ And how we wrote the model expression in R:</p>
 <span id="cb179-45"><a href="adyr.html#cb179-45" aria-hidden="true" tabindex="-1"></a>                   <span class="at">slope     =</span> <span class="dv">1</span>) ) <span class="sc">+</span></span>
 <span id="cb179-46"><a href="adyr.html#cb179-46" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>( <span class="at">x =</span> <span class="st">&quot;Modeled lambda&quot;</span>,</span>
 <span id="cb179-47"><a href="adyr.html#cb179-47" aria-hidden="true" tabindex="-1"></a>        <span class="at">y =</span> <span class="st">&quot;Observed population growth rate&quot;</span> )</span></code></pre></div>
-<p><img src="rupdemo-webpage_files/figure-html/unnamed-chunk-93-1.png" width="768" /></p>
+<p><img src="rupdemo-webpage_files/figure-html/unnamed-chunk-96-1.png" width="768" /></p>
 <div class="sourceCode" id="cb180"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb180-1"><a href="adyr.html#cb180-1" aria-hidden="true" tabindex="-1"></a><span class="co"># dev.off( )</span></span></code></pre></div>
 <center>
 <table class="gmisc_table" style="border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;">
@@ -1463,7 +1463,7 @@ Projected<br>population growth
 <div class="sourceCode" id="cb181"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb181-1"><a href="adyr.html#cb181-1" aria-hidden="true" tabindex="-1"></a>all_pars <span class="ot">&lt;-</span> <span class="fu">c</span>( pars_cons_wide, pars_var_wide )</span>
 <span id="cb181-2"><a href="adyr.html#cb181-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb181-3"><a href="adyr.html#cb181-3" aria-hidden="true" tabindex="-1"></a><span class="co"># write.csv( all_pars, &quot;data/Bou_gra_yr/all_pars.csv&quot;, row.names = F )</span></span></code></pre></div>
-<p>Now let’s build the proto-IPM. Some comments have been included in the following code to explain the new pieces, but refer back to Chapter 4 <a href="adwf.html#ipmr4">4.4.10</a> for more details about constructing the IPM in ipmr. I’m jumping right in to the full proto-IPM with both kernels. Note the use of the <code>_yr</code> suffix on all terms AND expressions which vary across the years, every time they are mentioned!!!</p>
+<p>Now let’s build the proto-IPM. Some comments have been included in the following code to explain the new pieces, but refer back to Chapter <a href="adwf.html#ipmr4">4.4.10</a> for more details about constructing the IPM in ipmr. I’m jumping right in to the full proto-IPM with both kernels. Note the use of the <code>_yr</code> suffix on all terms AND expressions which vary across the years, every time they are mentioned!!!</p>
 <div class="sourceCode" id="cb182"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb182-1"><a href="adyr.html#cb182-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>( ipmr )</span>
 <span id="cb182-2"><a href="adyr.html#cb182-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb182-3"><a href="adyr.html#cb182-3" aria-hidden="true" tabindex="-1"></a>proto_ipm_yr <span class="ot">&lt;-</span> <span class="fu">init_ipm</span>( <span class="at">sim_gen   =</span> <span class="st">&quot;simple&quot;</span>,</span>
