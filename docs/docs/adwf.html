@@ -194,8 +194,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.4.6" data-path="adwf.html"><a href="adwf.html#data-formatting"><i class="fa fa-check"></i><b>4.4.6</b> 6. Data formatting</a></li>
 <li class="chapter" data-level="4.4.7" data-path="adwf.html"><a href="adwf.html#plotting-the-raw-data"><i class="fa fa-check"></i><b>4.4.7</b> 7. Plotting the raw data</a></li>
 <li class="chapter" data-level="4.4.8" data-path="adwf.html"><a href="adwf.html#fitting-vital-rate-models-for-the-mean-ipm"><i class="fa fa-check"></i><b>4.4.8</b> 8. Fitting vital rate models for the mean IPM</a></li>
-<li class="chapter" data-level="4.4.9" data-path="adwf.html"><a href="adwf.html#building-the-ipm-from-scratch"><i class="fa fa-check"></i><b>4.4.9</b> 9. Building the IPM from scratch</a></li>
-<li class="chapter" data-level="4.4.10" data-path="adwf.html"><a href="adwf.html#building-the-ipm-with-ipmr"><i class="fa fa-check"></i><b>4.4.10</b> 10. Building the IPM with <code>ipmr</code></a></li>
+<li class="chapter" data-level="4.4.9" data-path="adwf.html"><a href="adwf.html#buildipm4"><i class="fa fa-check"></i><b>4.4.9</b> 9. Building the IPM from scratch</a></li>
+<li class="chapter" data-level="4.4.10" data-path="adwf.html"><a href="adwf.html#ipmr4"><i class="fa fa-check"></i><b>4.4.10</b> 10. Building the IPM with <code>ipmr</code></a></li>
 <li class="chapter" data-level="4.4.11" data-path="adwf.html"><a href="adwf.html#populating-the-padrino-database-template"><i class="fa fa-check"></i><b>4.4.11</b> 11. Populating the PADRINO database template</a></li>
 <li class="chapter" data-level="4.4.12" data-path="adwf.html"><a href="adwf.html#finishing-up-the-digitization-project"><i class="fa fa-check"></i><b>4.4.12</b> 12. Finishing up the digitization project</a></li>
 </ul></li>
@@ -317,13 +317,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 4 gzgz_11 BOUGRA_1997_1 2000       0.3754913      NA               1  NA   0.4095949     TRUE   FALSE      gzgz      11
 ## 5 gzgz_11 BOUGRA_1997_1 2001       0.4095949      NA               1  NA   0.1874513     TRUE   FALSE      gzgz      11
 ## 6 gzgz_11 BOUGRA_1997_1 2002       0.1874513      NA               1  NA   0.3677826     TRUE   FALSE      gzgz      11</code></pre>
-<p>We can then use these data to parameterize vital rate models and then MPMs/IPMs, following the general workflow described in Chapter 3. Below, I will walk us through this workflow for our example species from Colorado, <em>Bouteloua gracilis</em>.</p>
+<p>We can then use these data to parameterize vital rate models and then MPMs/IPMs, following the general workflow described in Chapter <a href="genwf.html#genwf">3</a>. Below, I will walk us through this workflow for our example species from Colorado, <em>Bouteloua gracilis</em>.</p>
 </div>
 <div id="workflow-with-example-dataset" class="section level2 hasAnchor" number="4.4">
 <h2><span class="header-section-number">4.4</span> Workflow with example dataset<a href="adwf.html#workflow-with-example-dataset" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="reading-the-publications" class="section level3 hasAnchor" number="4.4.1">
 <h3><span class="header-section-number">4.4.1</span> 1. Reading the publications<a href="adwf.html#reading-the-publications" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The Colorado dataset is featured in four of the publications linked above. In Stears et al. (2022, <em>Methods in Ecology &amp; Evolution</em>), the dataset is only mentioned as an example of the type of data which can be analyzed using plantTracker, so there is nothing new to extract from here. In the other three papers, Chu et al. (2013, <em>Ecology</em>), Chu et al. (2013, <em>Journal of Ecology</em>), and Stears et al. (2022, <em>Ecology</em>), details are given about how the data were collected, but there is little else to gain for our models. The one piece of information that might be useful is that the tracked plots are not all equal; there are two levels of a grazing experiment (historically grazed or ungrazed, and grazed or ungrazed during the sampling period, four total treatment combinations) which we should consider analyzing separately (see Chapter 5).</p>
+<p>The Colorado dataset is featured in four of the publications linked above. In Stears et al. (2022, <em>Methods in Ecology &amp; Evolution</em>), the dataset is only mentioned as an example of the type of data which can be analyzed using plantTracker, so there is nothing new to extract from here. In the other three papers, Chu et al. (2013, <em>Ecology</em>), Chu et al. (2013, <em>Journal of Ecology</em>), and Stears et al. (2022, <em>Ecology</em>), details are given about how the data were collected, but there is little else to gain for our models. The one piece of information that might be useful is that the tracked plots are not all equal; there are two levels of a grazing experiment (historically grazed or ungrazed, and grazed or ungrazed during the sampling period, four total treatment combinations) which we should consider analyzing separately (see Chapter <a href="adex.html#adex">5</a> ).</p>
 </div>
 <div id="sketching-an-outline-of-the-ipm" class="section level3 hasAnchor" number="4.4.2">
 <h3><span class="header-section-number">4.4.2</span> 2. Sketching an outline of the IPM<a href="adwf.html#sketching-an-outline-of-the-ipm" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -1039,8 +1039,8 @@ Bou_gra[which( Bou_gra$Quad    == &quot;ungz_24&quot; &amp;
           
 surv_df      &lt;- surv %&gt;% 
   mutate( logarea = log( basalArea_genet ) )</code></pre>
-<div id="growth-model-1" class="section level4 hasAnchor" number="4.4.8.1">
-<h4><span class="header-section-number">4.4.8.1</span> Growth model<a href="adwf.html#growth-model-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="growvr4" class="section level4 hasAnchor" number="4.4.8.1">
+<h4><span class="header-section-number">4.4.8.1</span> Growth model<a href="adwf.html#growvr4" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Now we can start by modelling growth, using the simplest model to describe the effect of size at time t0 on size at time t1.</p>
 <div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="adwf.html#cb54-1" aria-hidden="true" tabindex="-1"></a>gr_mod_mean <span class="ot">&lt;-</span> <span class="fu">lm</span>( logarea.t1 <span class="sc">~</span> logarea.t0, <span class="at">data =</span> grow_df)</span></code></pre></div>
 <p>Let’s check how well the mean model predicts the whole dataset.</p>
@@ -1177,8 +1177,8 @@ surv_df      &lt;- surv %&gt;%
 <p>Now, we are finally ready to start building the IPM!</p>
 </div>
 </div>
-<div id="building-the-ipm-from-scratch" class="section level3 hasAnchor" number="4.4.9">
-<h3><span class="header-section-number">4.4.9</span> 9. Building the IPM from scratch<a href="adwf.html#building-the-ipm-from-scratch" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="buildipm4" class="section level3 hasAnchor" number="4.4.9">
+<h3><span class="header-section-number">4.4.9</span> 9. Building the IPM from scratch<a href="adwf.html#buildipm4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We will first construct a dataframe containing all of our mean IPM parameters:</p>
 <div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="adwf.html#cb70-1" aria-hidden="true" tabindex="-1"></a>extr_value <span class="ot">&lt;-</span> <span class="cf">function</span>(x, field){ <span class="fu">subset</span>( x, coefficient <span class="sc">==</span> field )<span class="sc">$</span>value }</span>
 <span id="cb70-2"><a href="adwf.html#cb70-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -1336,8 +1336,8 @@ However, both expressions will be accounted for in the same function:</p>
 <pre><code>## [1] 1.05844</code></pre>
 <p>Once we are satisfied with our IPM, we can move on to constructing it with ipmr!</p>
 </div>
-<div id="building-the-ipm-with-ipmr" class="section level3 hasAnchor" number="4.4.10">
-<h3><span class="header-section-number">4.4.10</span> 10. Building the IPM with <code>ipmr</code><a href="adwf.html#building-the-ipm-with-ipmr" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="ipmr4" class="section level3 hasAnchor" number="4.4.10">
+<h3><span class="header-section-number">4.4.10</span> 10. Building the IPM with <code>ipmr</code><a href="adwf.html#ipmr4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Now we can move on to constructing the IPM using the ipmr syntax on which the PADRINO database relies. I will write out each component of the ipmr <code>init_ipm( )</code> function independently, then run them together at the end.</p>
 <p>First, we initialize the <code>init_ipm( )</code> function:</p>
 <pre><code>library( ipmr )

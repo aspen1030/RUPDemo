@@ -1,8 +1,8 @@
 # Adler Dataset: Extensions to the Mean IPM {#adex}
 
-In Chapter 4, we followed the workflow to produce the mean IPM from our example dataset, *Bouteloua gracilis* from the Colorado site of the Adler dataset. However, this dataset had the potential to create as many as 125 other IPMs which we did not explore! This document aims to show how we constructed IPMs for each specific yearly transition, and how we might approach incorporating different treatments into our IPMs.
+In Chapter \@ref(genwf), we followed the workflow to produce the mean IPM from our example dataset, *Bouteloua gracilis* from the Colorado site of the Adler dataset. However, this dataset had the potential to create as many as 125 other IPMs which we did not explore! This document aims to show how we constructed IPMs for each specific yearly transition, and how we might approach incorporating different treatments into our IPMs.
 
-This document assumes you have already read through Chapter 4, and only includes steps which deviate from the workflow described previously. If you are working with a similar dataset with hierarchical structure/nestedness, it would be a good idea to work out of a different subfolder in the overall R project to differentiate the mean model workflow from different workflows exploring levels of nestedness in the data.
+This document assumes you have already read through Chapter \@ref(genwf), and only includes steps which deviate from the workflow described previously. If you are working with a similar dataset with hierarchical structure/nestedness, it would be a good idea to work out of a different subfolder in the overall R project to differentiate the mean model workflow from different workflows exploring levels of nestedness in the data.
 
 ## Exploring our options
 
@@ -74,7 +74,7 @@ Only a few treatment x year combinations have enough individuals for IPMs, and w
   - 1 IPM per historical treatment, using mean parameter values across all transitions and ignoring the current treatment (2 IPMs)  
   - 1 IPM per current treatment, using mean parameter values across all transitions and ignoring the historical treatment (2 IPMs)    
 
-We will follow a slightly modified workflow from Chapter 4, since we are already familiar with the data and the basic structure of the models. In Chapter 6, we will begin by introducing the random effect of year to the basic models we constructed in Chapter 4 to build 13 new IPMs, one for each transition. Then, in Chapter 7, we will introduce the treatments to the basic model to build eight new IPMs and examine the effect of the different levels of the grazing treatments on the population growth rate.
+We will follow a slightly modified workflow from Chapter 4, since we are already familiar with the data and the basic structure of the models. In Chapter \@ref(adyr), we will begin by introducing the random effect of year to the basic models we constructed in Chapter 4 to build 13 new IPMs, one for each transition. Then, in Chapter 7, we will introduce the treatments to the basic model to build eight new IPMs and examine the effect of the different levels of the grazing treatments on the population growth rate.
 
 
 ## Plotting by year x treatment

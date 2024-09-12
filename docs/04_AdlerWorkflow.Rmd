@@ -81,14 +81,14 @@ Bou_gra <- read.csv("https://raw.githubusercontent.com/aspen1030/RUPDemo/main/Bo
 head(Bou_gra[c(3,5:15)])
 ```
 
-We can then use these data to parameterize vital rate models and then MPMs/IPMs, following the general workflow described in Chapter 3. Below, I will walk us through this workflow for our example species from Colorado, *Bouteloua gracilis*.
+We can then use these data to parameterize vital rate models and then MPMs/IPMs, following the general workflow described in Chapter \@ref(genwf). Below, I will walk us through this workflow for our example species from Colorado, *Bouteloua gracilis*.
 
 
 ## Workflow with example dataset 
 
 ### 1. Reading the publications
 
-The Colorado dataset is featured in four of the publications linked above. In Stears et al. (2022, *Methods in Ecology & Evolution*), the dataset is only mentioned as an example of the type of data which can be analyzed using plantTracker, so there is nothing new to extract from here. In the other three papers, Chu et al. (2013, *Ecology*), Chu et al. (2013, *Journal of Ecology*), and Stears et al. (2022, *Ecology*), details are given about how the data were collected, but there is little else to gain for our models. The one piece of information that might be useful is that the tracked plots are not all equal; there are two levels of a grazing experiment (historically grazed or ungrazed, and grazed or ungrazed during the sampling period, four total treatment combinations) which we should consider analyzing separately (see Chapter 5).
+The Colorado dataset is featured in four of the publications linked above. In Stears et al. (2022, *Methods in Ecology & Evolution*), the dataset is only mentioned as an example of the type of data which can be analyzed using plantTracker, so there is nothing new to extract from here. In the other three papers, Chu et al. (2013, *Ecology*), Chu et al. (2013, *Journal of Ecology*), and Stears et al. (2022, *Ecology*), details are given about how the data were collected, but there is little else to gain for our models. The one piece of information that might be useful is that the tracked plots are not all equal; there are two levels of a grazing experiment (historically grazed or ungrazed, and grazed or ungrazed during the sampling period, four total treatment combinations) which we should consider analyzing separately (see Chapter \@ref(adex) ).
 
 ### 2. Sketching an outline of the IPM
 
@@ -552,7 +552,7 @@ surv_df      <- surv %>%
   mutate( logarea = log( basalArea_genet ) )
 ```
 
-#### Growth model
+#### Growth model {#growvr4}
 Now we can start by modelling growth, using the simplest model to describe the effect of size at time t0 on size at time t1.
 
 ```{r}
@@ -731,7 +731,7 @@ others  <- data.frame( coefficient = c( "rec_siz", "rec_sd",
 Now, we are finally ready to start building the IPM!
 
 
-### 9. Building the IPM from scratch
+### 9. Building the IPM from scratch {#buildipm4}
 
 We will first construct a dataframe containing all of our mean IPM parameters:
 ```{r}
@@ -927,7 +927,7 @@ Once we are satisfied with our IPM, we can move on to constructing it with ipmr!
 
 
 
-### 10. Building the IPM with `ipmr`
+### 10. Building the IPM with `ipmr` {#ipmr4}
 
 Now we can move on to constructing the IPM using the ipmr syntax on which the PADRINO database relies. I will write out each component of the ipmr `init_ipm( )` function independently, then run them together at the end.
 

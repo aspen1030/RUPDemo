@@ -47,12 +47,12 @@ creating-a-new-r-project
 data-formatting
 plotting-the-raw-data
 fitting-vital-rate-models-for-the-mean-ipm
-growth-model-1
+growvr4
 survival-model-1
 recruitment-model-1
 exporting-parameter-estimates
-building-the-ipm-from-scratch
-building-the-ipm-with-ipmr
+buildipm4
+ipmr4
 populating-the-padrino-database-template
 finishing-up-the-digitization-project
 adex
@@ -61,7 +61,7 @@ plotting-by-year-x-treatment
 adyr
 making-the-parameter-shopping-list-1
 survival-model-2
-growth-model-2
+growth-model-1
 recruitment-model-2
 other-parameters-1
 creating-new-folders-in-the-r-project
@@ -69,7 +69,7 @@ data-formatting-1
 plotting-the-raw-data-by-year
 fitting-vital-rate-models-with-the-random-effect-of-year
 survival-model-3
-growth-model-3
+growth-model-2
 recruitment-model-3
 exporting-parameter-estimates-1
 building-the-year-specific-ipms-from-scratch

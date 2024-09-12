@@ -194,8 +194,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.4.6" data-path="adwf.html"><a href="adwf.html#data-formatting"><i class="fa fa-check"></i><b>4.4.6</b> 6. Data formatting</a></li>
 <li class="chapter" data-level="4.4.7" data-path="adwf.html"><a href="adwf.html#plotting-the-raw-data"><i class="fa fa-check"></i><b>4.4.7</b> 7. Plotting the raw data</a></li>
 <li class="chapter" data-level="4.4.8" data-path="adwf.html"><a href="adwf.html#fitting-vital-rate-models-for-the-mean-ipm"><i class="fa fa-check"></i><b>4.4.8</b> 8. Fitting vital rate models for the mean IPM</a></li>
-<li class="chapter" data-level="4.4.9" data-path="adwf.html"><a href="adwf.html#building-the-ipm-from-scratch"><i class="fa fa-check"></i><b>4.4.9</b> 9. Building the IPM from scratch</a></li>
-<li class="chapter" data-level="4.4.10" data-path="adwf.html"><a href="adwf.html#building-the-ipm-with-ipmr"><i class="fa fa-check"></i><b>4.4.10</b> 10. Building the IPM with <code>ipmr</code></a></li>
+<li class="chapter" data-level="4.4.9" data-path="adwf.html"><a href="adwf.html#buildipm4"><i class="fa fa-check"></i><b>4.4.9</b> 9. Building the IPM from scratch</a></li>
+<li class="chapter" data-level="4.4.10" data-path="adwf.html"><a href="adwf.html#ipmr4"><i class="fa fa-check"></i><b>4.4.10</b> 10. Building the IPM with <code>ipmr</code></a></li>
 <li class="chapter" data-level="4.4.11" data-path="adwf.html"><a href="adwf.html#populating-the-padrino-database-template"><i class="fa fa-check"></i><b>4.4.11</b> 11. Populating the PADRINO database template</a></li>
 <li class="chapter" data-level="4.4.12" data-path="adwf.html"><a href="adwf.html#finishing-up-the-digitization-project"><i class="fa fa-check"></i><b>4.4.12</b> 12. Finishing up the digitization project</a></li>
 </ul></li>
@@ -237,7 +237,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="adyr" class="section level1 hasAnchor" number="6">
 <h1><span class="header-section-number">6</span> Adler Dataset: Extensions to the Mean IPM - Incorporating Year<a href="adyr.html#adyr" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>In this chapter, we will introduce the effect of year into the vital rate models we fit in Chapter 4 for the mean IPM. We will build from Chapters 4 and 5 to continue exploring the data at the year-specific level, re-fit the vital rate models, and parameterize 13 new IPMs. We will then compare the lambda values of the year-specific IPMs to the lambda of the mean IPM.</p>
-<p>As discussed in Chapter 5, this chapter will roughly follow the same workflow as Chapter 4, but I will not spend time reiterating the same things I detailed in Chapter 4. Therefore, a familiarity with the contents of Chapter 4 is necessary to follow along with this chapter!</p>
+<p>As discussed in Chapter <a href="adex.html#adex">5</a>, this chapter will roughly follow the same workflow as Chapter 4, but I will not spend time reiterating the same things I detailed in Chapter 4. Therefore, a familiarity with the contents of Chapter <a href="genwf.html#genwf">3</a> is necessary to follow along with this chapter!</p>
 <p>We will start by jumping to step 3, to discuss how our vital rate models are impacted when we consider the effect of year.</p>
 <div id="making-the-parameter-shopping-list-1" class="section level3 hasAnchor" number="6.0.1">
 <h3><span class="header-section-number">6.0.1</span> 3. Making the parameter “shopping list”<a href="adyr.html#making-the-parameter-shopping-list-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -257,8 +257,8 @@ The <span class="math inline">\(_{yr}\)</span> subscript tells us that we will h
 <pre><code>s_yr = 1 / ( 1 + exp( -( beta_s0_yr + beta_s1_yr * size_0 ) ) )</code></pre>
 <p>Now, instead of only needing to estimate two parameter values, we will need to extract 26 parameter values from our model, one slope and one intercept for each year. We can calculate these values by subtracting the random effects (from <code>ranef()</code>) from the fixed effects (from <code>fixef()</code>) for each year, or by simply using the <code>coef()</code> function.</p>
 </div>
-<div id="growth-model-2" class="section level4 hasAnchor" number="6.0.1.2">
-<h4><span class="header-section-number">6.0.1.2</span> Growth model<a href="adyr.html#growth-model-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="growth-model-1" class="section level4 hasAnchor" number="6.0.1.2">
+<h4><span class="header-section-number">6.0.1.2</span> Growth model<a href="adyr.html#growth-model-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Similarly to the survival model, we add <span class="math inline">\(_{yr}\)</span> to some of the model terms:</p>
 <p><span class="math display">\[G_{yr}(z&#39;, z) = f_{g}(z&#39;, \mu_{g,yr}, \sigma_{g})\]</span>
 <span class="math display">\[\mu_{g,yr} = \beta_{g0,yr} + \beta_{g1,yr} * z\]</span>
@@ -653,8 +653,8 @@ Since we are building these new IPMs from the same dataset we used to parameteri
 <div class="sourceCode" id="cb145"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb145-1"><a href="adyr.html#cb145-1" aria-hidden="true" tabindex="-1"></a><span class="co"># dev.off( )</span></span></code></pre></div>
 <p>These plots show the year-specific models plotted over the binned data. Some years seem to be fit better than others, but overall the model describes the data fairly well.</p>
 </div>
-<div id="growth-model-3" class="section level4 hasAnchor" number="6.0.5.2">
-<h4><span class="header-section-number">6.0.5.2</span> Growth model<a href="adyr.html#growth-model-3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="growth-model-2" class="section level4 hasAnchor" number="6.0.5.2">
+<h4><span class="header-section-number">6.0.5.2</span> Growth model<a href="adyr.html#growth-model-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Here is the first model that we wrote previously, describing the growth of individuals:</p>
 <div class="sourceCode" id="cb146"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb146-1"><a href="adyr.html#cb146-1" aria-hidden="true" tabindex="-1"></a>grow_df      <span class="ot">&lt;-</span> grow <span class="sc">%&gt;%</span> </span>
 <span id="cb146-2"><a href="adyr.html#cb146-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>( <span class="at">logarea_t0 =</span> <span class="fu">log</span>( basalArea_genet ),</span>
@@ -743,7 +743,7 @@ Since we are building these new IPMs from the same dataset we used to parameteri
 <span id="cb153-2"><a href="adyr.html#cb153-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">resid</span>( gr_mod_yr2 )<span class="sc">^</span><span class="dv">2</span></span>
 <span id="cb153-3"><a href="adyr.html#cb153-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb153-4"><a href="adyr.html#cb153-4" aria-hidden="true" tabindex="-1"></a>gr_var <span class="ot">&lt;-</span> <span class="fu">nls</span>( y <span class="sc">~</span> a <span class="sc">*</span> <span class="fu">exp</span>( b <span class="sc">*</span> x ), <span class="at">start =</span> <span class="fu">list</span>( <span class="at">a =</span> <span class="dv">1</span>, <span class="at">b =</span> <span class="dv">0</span> ) )</span></code></pre></div>
-<p>This is the same model as the one we wrote in Chapter 4, as the growth variance model does not change by year.</p>
+<p>This is the same model as the one we wrote in Chapter 4 <a href="adwf.html#growvr4">4.4.8.1</a>, as the growth variance model does not change by year.</p>
 </div>
 <div id="recruitment-model-3" class="section level4 hasAnchor" number="6.0.5.3">
 <h4><span class="header-section-number">6.0.5.3</span> Recruitment model<a href="adyr.html#recruitment-model-3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
@@ -930,7 +930,7 @@ And how we wrote the model expression in R:</p>
 <span id="cb168-7"><a href="adyr.html#cb168-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>( f )</span>
 <span id="cb168-8"><a href="adyr.html#cb168-8" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb168-9"><a href="adyr.html#cb168-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
-<p>Next we can assemble the kernel function. I have removed the comments to save space; refer to Chapter 4 for further explanation.</p>
+<p>Next we can assemble the kernel function. I have removed the comments to save space; refer to Chapter 4 <a href="adwf.html#buildipm4">4.4.9</a> for further explanation.</p>
 <div class="sourceCode" id="cb169"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb169-1"><a href="adyr.html#cb169-1" aria-hidden="true" tabindex="-1"></a>kernel <span class="ot">&lt;-</span> <span class="cf">function</span>( pars ) {</span>
 <span id="cb169-2"><a href="adyr.html#cb169-2" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb169-3"><a href="adyr.html#cb169-3" aria-hidden="true" tabindex="-1"></a>  n   <span class="ot">&lt;-</span> pars<span class="sc">$</span>mat_siz</span>
@@ -1463,7 +1463,7 @@ Projected<br>population growth
 <div class="sourceCode" id="cb181"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb181-1"><a href="adyr.html#cb181-1" aria-hidden="true" tabindex="-1"></a>all_pars <span class="ot">&lt;-</span> <span class="fu">c</span>( pars_cons_wide, pars_var_wide )</span>
 <span id="cb181-2"><a href="adyr.html#cb181-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb181-3"><a href="adyr.html#cb181-3" aria-hidden="true" tabindex="-1"></a><span class="co"># write.csv( all_pars, &quot;data/Bou_gra_yr/all_pars.csv&quot;, row.names = F )</span></span></code></pre></div>
-<p>Now let’s build the proto-IPM. Some comments have been included in the following code to explain the new pieces, but refer back to Chapter 4 for more details about constructing the IPM in ipmr. I’m jumping right in to the full proto-IPM with both kernels. Note the use of the <code>_yr</code> suffix on all terms AND expressions which vary across the years, every time they are mentioned!!!</p>
+<p>Now let’s build the proto-IPM. Some comments have been included in the following code to explain the new pieces, but refer back to Chapter 4 <a href="adwf.html#ipmr4">4.4.10</a> for more details about constructing the IPM in ipmr. I’m jumping right in to the full proto-IPM with both kernels. Note the use of the <code>_yr</code> suffix on all terms AND expressions which vary across the years, every time they are mentioned!!!</p>
 <div class="sourceCode" id="cb182"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb182-1"><a href="adyr.html#cb182-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>( ipmr )</span>
 <span id="cb182-2"><a href="adyr.html#cb182-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb182-3"><a href="adyr.html#cb182-3" aria-hidden="true" tabindex="-1"></a>proto_ipm_yr <span class="ot">&lt;-</span> <span class="fu">init_ipm</span>( <span class="at">sim_gen   =</span> <span class="st">&quot;simple&quot;</span>,</span>

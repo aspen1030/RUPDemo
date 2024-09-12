@@ -2,7 +2,7 @@
 
 In the RUPDemo project, we will digitize IPMs from published studies, and directly from raw data. In the first scenario, you will recreate IPMs exactly how they are published in order to reproduce the exact same results from the paper, with the only difference being that you will reformat the model to be included within the PADRINO database. In the second scenario, you will completely parameterize an IPM from scratch based on a published dataset that lacks an IPM. Most of the "easiest" publications of the first type have already been added to PADRINO, leaving much more complicated datasets for us to work with. Most of these fall somewhere between the two types of digitization tasks, involving extensive data preparation and parameterization of vital rate models based on limited information reported in the publication. 
 
-At the beginning of the RUPDemo project, we will all start with a collection of chart quadrat data that includes "the Adler dataset" and other similar datasets. Working with these datasets requires preparation of spatial data collected from chart quadrats and then complete parameterization of IPMs from scratch. Fortunately, I have already started digitizing some of the models from this collection and can supply a roadmap of the specific workflow for working with these data, which is found in Chapter 4. In the sections to follow, however, I will focus on outlining a more general workflow that can apply to pretty much any future RUPDemo digitization projects.
+At the beginning of the RUPDemo project, we will all start with a collection of chart quadrat data that includes "the Adler dataset" and other similar datasets. Working with these datasets requires preparation of spatial data collected from chart quadrats and then complete parameterization of IPMs from scratch. Fortunately, I have already started digitizing some of the models from this collection and can supply a roadmap of the specific workflow for working with these data, which is found in Chapter \@ref(adwf). In the sections to follow, however, I will focus on outlining a more general workflow that can apply to pretty much any future RUPDemo digitization projects.
 
 This guide aims to amend what is currently missing from [the official PADRINO digitization guide](https://padrinodb.github.io/Padrino/index.html). Please refer to both of these guides in tandem to answer your questions; sections below which seem a little sparse are likely well-detailed in the official PADRINO guide.
 
@@ -87,7 +87,7 @@ In some cases, you might find that only a few parameters are missing. This will 
 
 ### 5. Create a new R project
 
-Once you know you have everything you need, create a new R project in your folder. Consult Chapter 2 for more details about structuring and organizing your project. In general, the project should be named according to the first author and the year of publication.
+Once you know you have everything you need, create a new R project in your folder. Consult Chapter \@ref(projorg) for more details about structuring and organizing your project. In general, the project should be named according to the first author and the year of publication.
 
 ### 6. Script: 01_DataFormatting.R
 

@@ -194,8 +194,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.4.6" data-path="adwf.html"><a href="adwf.html#data-formatting"><i class="fa fa-check"></i><b>4.4.6</b> 6. Data formatting</a></li>
 <li class="chapter" data-level="4.4.7" data-path="adwf.html"><a href="adwf.html#plotting-the-raw-data"><i class="fa fa-check"></i><b>4.4.7</b> 7. Plotting the raw data</a></li>
 <li class="chapter" data-level="4.4.8" data-path="adwf.html"><a href="adwf.html#fitting-vital-rate-models-for-the-mean-ipm"><i class="fa fa-check"></i><b>4.4.8</b> 8. Fitting vital rate models for the mean IPM</a></li>
-<li class="chapter" data-level="4.4.9" data-path="adwf.html"><a href="adwf.html#building-the-ipm-from-scratch"><i class="fa fa-check"></i><b>4.4.9</b> 9. Building the IPM from scratch</a></li>
-<li class="chapter" data-level="4.4.10" data-path="adwf.html"><a href="adwf.html#building-the-ipm-with-ipmr"><i class="fa fa-check"></i><b>4.4.10</b> 10. Building the IPM with <code>ipmr</code></a></li>
+<li class="chapter" data-level="4.4.9" data-path="adwf.html"><a href="adwf.html#buildipm4"><i class="fa fa-check"></i><b>4.4.9</b> 9. Building the IPM from scratch</a></li>
+<li class="chapter" data-level="4.4.10" data-path="adwf.html"><a href="adwf.html#ipmr4"><i class="fa fa-check"></i><b>4.4.10</b> 10. Building the IPM with <code>ipmr</code></a></li>
 <li class="chapter" data-level="4.4.11" data-path="adwf.html"><a href="adwf.html#populating-the-padrino-database-template"><i class="fa fa-check"></i><b>4.4.11</b> 11. Populating the PADRINO database template</a></li>
 <li class="chapter" data-level="4.4.12" data-path="adwf.html"><a href="adwf.html#finishing-up-the-digitization-project"><i class="fa fa-check"></i><b>4.4.12</b> 12. Finishing up the digitization project</a></li>
 </ul></li>
@@ -236,8 +236,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="adex" class="section level1 hasAnchor" number="5">
 <h1><span class="header-section-number">5</span> Adler Dataset: Extensions to the Mean IPM<a href="adex.html#adex" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>In Chapter 4, we followed the workflow to produce the mean IPM from our example dataset, <em>Bouteloua gracilis</em> from the Colorado site of the Adler dataset. However, this dataset had the potential to create as many as 125 other IPMs which we did not explore! This document aims to show how we constructed IPMs for each specific yearly transition, and how we might approach incorporating different treatments into our IPMs.</p>
-<p>This document assumes you have already read through Chapter 4, and only includes steps which deviate from the workflow described previously. If you are working with a similar dataset with hierarchical structure/nestedness, it would be a good idea to work out of a different subfolder in the overall R project to differentiate the mean model workflow from different workflows exploring levels of nestedness in the data.</p>
+<p>In Chapter <a href="genwf.html#genwf">3</a>, we followed the workflow to produce the mean IPM from our example dataset, <em>Bouteloua gracilis</em> from the Colorado site of the Adler dataset. However, this dataset had the potential to create as many as 125 other IPMs which we did not explore! This document aims to show how we constructed IPMs for each specific yearly transition, and how we might approach incorporating different treatments into our IPMs.</p>
+<p>This document assumes you have already read through Chapter <a href="genwf.html#genwf">3</a>, and only includes steps which deviate from the workflow described previously. If you are working with a similar dataset with hierarchical structure/nestedness, it would be a good idea to work out of a different subfolder in the overall R project to differentiate the mean model workflow from different workflows exploring levels of nestedness in the data.</p>
 <div id="exploring-our-options" class="section level2 hasAnchor" number="5.1">
 <h2><span class="header-section-number">5.1</span> Exploring our options<a href="adex.html#exploring-our-options" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>First, recall the 126 possible IPMs we could build from the <em>Bouteloua gracilis</em> dataset. We have 13 transitions (14 years) of data, across six pastures, each of which contained four plots with unique grazing treatments. In theory, we could construct the following IPMs:</p>
@@ -596,7 +596,7 @@ Total
 </li>
 <li>1 IPM per current treatment, using mean parameter values across all transitions and ignoring the historical treatment (2 IPMs)</li>
 </ul>
-<p>We will follow a slightly modified workflow from Chapter 4, since we are already familiar with the data and the basic structure of the models. In Chapter 6, we will begin by introducing the random effect of year to the basic models we constructed in Chapter 4 to build 13 new IPMs, one for each transition. Then, in Chapter 7, we will introduce the treatments to the basic model to build eight new IPMs and examine the effect of the different levels of the grazing treatments on the population growth rate.</p>
+<p>We will follow a slightly modified workflow from Chapter 4, since we are already familiar with the data and the basic structure of the models. In Chapter <a href="adyr.html#adyr">6</a>, we will begin by introducing the random effect of year to the basic models we constructed in Chapter 4 to build 13 new IPMs, one for each transition. Then, in Chapter 7, we will introduce the treatments to the basic model to build eight new IPMs and examine the effect of the different levels of the grazing treatments on the population growth rate.</p>
 </div>
 <div id="plotting-by-year-x-treatment" class="section level2 hasAnchor" number="5.2">
 <h2><span class="header-section-number">5.2</span> Plotting by year x treatment<a href="adex.html#plotting-by-year-x-treatment" class="anchor-section" aria-label="Anchor link to header"></a></h2>

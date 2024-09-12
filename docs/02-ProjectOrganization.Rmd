@@ -1,6 +1,6 @@
 # Project Organization {#projorg}
 
-Each publication or dataset you work with will need its own R project to contain all of the work you will do to digitize the model and get it ready to be added to the PADRINO database. More information about selecting a publication to digitize and initializing a project can be found in Chapter 3: General Workflow.
+Each publication or dataset you work with will need its own R project to contain all of the work you will do to digitize the model and get it ready to be added to the PADRINO database. More information about selecting a publication to digitize and initializing a project can be found in Chapter \@ref(genwf) : General Workflow.
 
 All of your projects should be kept together in a folder. Therefore, it is important that you title your R projects consistently and descriptively. Generally, using the first author's last name and the year of publication separated by an underscore is most appropriate. There may be some instances where appending more information, like the journal or the focal species, is necessary. 
 
@@ -18,7 +18,7 @@ Within the project home folder, you should create three subfolders:
 You may have other files that you want to keep in a project, such as a PDF of the full article text, supplemental files/appendices, etc. For the most part, these can also be kept in the project home folder, EXCEPT if they contain readable data files (Excel tables or .csv, etc). Any data files that you might use in your digitization should go into the 'data' folder, otherwise there is no reason to include them in the R project. Depending on the publication you're working with, the amount of extra files you want to keep on-hand might be quite a lot. In that case, you should create a fourth subfolder titled 'supplement' and store everything in there.
 
 ### R folder
-Scripts in the 'R' folder should be given names beginning with numbers indicating the order in which they should be executed. The first script will almost always be something like "01_DataFormatting.R" in which you will prepare the data you downloaded or otherwise extracted to get it ready for modeling. The rest of the scripts you might write are detailed in Chapter 3: General Workflow. The file names suggested in that script can be modified by adding additional details about the dataset you are working with, if it helps you to better keep track of your work. Whatever you decide, please try to be consistent within each project! 
+Scripts in the 'R' folder should be given names beginning with numbers indicating the order in which they should be executed. The first script will almost always be something like "01_DataFormatting.R" in which you will prepare the data you downloaded or otherwise extracted to get it ready for modeling. The rest of the scripts you might write are detailed in Chapter \@ref(genwf) : General Workflow. The file names suggested in that script can be modified by adding additional details about the dataset you are working with, if it helps you to better keep track of your work. Whatever you decide, please try to be consistent within each project! 
 
 ### Data folder
 The data folder contains both the files with the original data, and the output of formatting that same data. Always be sure to use descriptive names so you don't mix up the raw data and the new data you worked so hard to put together!
@@ -146,5 +146,5 @@ folder_ex3 %>% htmlTable(align = "lll")
 
 Ultimately, the decision to split into different subfolders and how to nest these folders is hard to make *a priori*. You might discover along the way that you need to simplify the model before tackling the whole thing, and you might end up making way more than two versions of a model. It is worthwhile to spend some extra time reorganizing your project if you think it will make it easier to understand.
 
-Finally, always be sure to explain any project structure/nestedness in the wrapper file (more details in Chapter 3: General Workflow).
+Finally, always be sure to explain any project structure/nestedness in the wrapper file (more details in Chapter \@ref(genwf) : General Workflow).
 
