@@ -837,7 +837,7 @@ kernel <- function( pars ) {
   Fmat        <- matrix( 0, n, n )
   Fmat[]      <- matrix( fy( y, pars, h ), n, n )
   
-  # Survival matrix
+  # Survival vector
   Smat   <- c( )
   Smat   <- sx( y, pars )
   
